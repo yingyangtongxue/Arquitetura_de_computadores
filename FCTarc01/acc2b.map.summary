@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon May 08 14:53:59 2017
+Quartus II Version : 9.0 Build 132 02/25/2009 SJ Web Edition
+Revision Name : acc2b
+Top-level Entity Name : acc2b
+Family : Cyclone III
+Total logic elements : 6
+    Total combinational functions : 6
+    Dedicated logic registers : 2
+Total registers : 2
+Total pins : 7
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

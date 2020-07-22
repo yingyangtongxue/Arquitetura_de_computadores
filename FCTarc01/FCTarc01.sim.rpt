@@ -1,0 +1,276 @@
+Simulator report for FCTarc01
+Wed Jun 14 15:38:03 2017
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 100 nodes    ;
+; Simulation Coverage         ;      78.22 % ;
+; Total Number of Transitions ; 268          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone III  ;
+; Device                      ; EP3C16F484C6 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
+; Interconnect Delay Model Type                                                              ; Transport  ; Transport     ;
+; Cell Delay Model Type                                                                      ; Transport  ; Transport     ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      78.22 % ;
+; Total nodes checked                                 ; 100          ;
+; Total output ports checked                          ; 101          ;
+; Total output ports with complete 1/0-value coverage ; 79           ;
+; Total output ports with no 1/0-value coverage       ; 12           ;
+; Total output ports with no 1-value coverage         ; 20           ;
+; Total output ports with no 0-value coverage         ; 14           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                                                                                   ;
++---------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                         ; Output Port Name                                                                                       ; Output Port Type ;
++---------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+------------------+
+; |FCTarc01|ic2b:inst9|lpm_counter:lpm_counter_component|cntr_16i:auto_generated|counter_comb_bita0 ; |FCTarc01|ic2b:inst9|lpm_counter:lpm_counter_component|cntr_16i:auto_generated|counter_comb_bita0      ; combout          ;
+; |FCTarc01|ic2b:inst9|lpm_counter:lpm_counter_component|cntr_16i:auto_generated|counter_comb_bita0 ; |FCTarc01|ic2b:inst9|lpm_counter:lpm_counter_component|cntr_16i:auto_generated|counter_comb_bita0~COUT ; cout             ;
+; |FCTarc01|ic2b:inst9|lpm_counter:lpm_counter_component|cntr_16i:auto_generated|counter_comb_bita1 ; |FCTarc01|ic2b:inst9|lpm_counter:lpm_counter_component|cntr_16i:auto_generated|counter_comb_bita1      ; combout          ;
+; |FCTarc01|acc2b:inst1|registrador:inst|3~_emulated                                                ; |FCTarc01|acc2b:inst1|registrador:inst|3~_emulated                                                     ; q                ;
+; |FCTarc01|acc2b:inst1|registrador:inst|3~head_lut                                                 ; |FCTarc01|acc2b:inst1|registrador:inst|3~head_lut                                                      ; combout          ;
+; |FCTarc01|acc2b:inst1|registrador:inst|4~_emulated                                                ; |FCTarc01|acc2b:inst1|registrador:inst|4~_emulated                                                     ; q                ;
+; |FCTarc01|acc2b:inst1|registrador:inst|4~head_lut                                                 ; |FCTarc01|acc2b:inst1|registrador:inst|4~head_lut                                                      ; combout          ;
+; |FCTarc01|ula2b:inst|somador2bit:inst|inst                                                        ; |FCTarc01|ula2b:inst|somador2bit:inst|inst                                                             ; combout          ;
+; |FCTarc01|acc2b:inst1|registrador:inst|3~data_lut                                                 ; |FCTarc01|acc2b:inst1|registrador:inst|3~data_lut                                                      ; combout          ;
+; |FCTarc01|acc2b:inst1|registrador:inst|3~clear_lut                                                ; |FCTarc01|acc2b:inst1|registrador:inst|3~clear_lut                                                     ; combout          ;
+; |FCTarc01|acc2b:inst1|registrador:inst|4~data_lut                                                 ; |FCTarc01|acc2b:inst1|registrador:inst|4~data_lut                                                      ; combout          ;
+; |FCTarc01|b2b:inst3|registrador:inst|4~_emulated                                                  ; |FCTarc01|b2b:inst3|registrador:inst|4~_emulated                                                       ; q                ;
+; |FCTarc01|b2b:inst3|registrador:inst|4~head_lut                                                   ; |FCTarc01|b2b:inst3|registrador:inst|4~head_lut                                                        ; combout          ;
+; |FCTarc01|a2b:inst2|registrador:inst|4~_emulated                                                  ; |FCTarc01|a2b:inst2|registrador:inst|4~_emulated                                                       ; q                ;
+; |FCTarc01|a2b:inst2|registrador:inst|4~head_lut                                                   ; |FCTarc01|a2b:inst2|registrador:inst|4~head_lut                                                        ; combout          ;
+; |FCTarc01|b2b:inst3|registrador:inst|3~_emulated                                                  ; |FCTarc01|b2b:inst3|registrador:inst|3~_emulated                                                       ; q                ;
+; |FCTarc01|b2b:inst3|registrador:inst|3~head_lut                                                   ; |FCTarc01|b2b:inst3|registrador:inst|3~head_lut                                                        ; combout          ;
+; |FCTarc01|b2b:inst3|registrador:inst|4~data_lut                                                   ; |FCTarc01|b2b:inst3|registrador:inst|4~data_lut                                                        ; combout          ;
+; |FCTarc01|b2b:inst3|registrador:inst|3~clear_lut                                                  ; |FCTarc01|b2b:inst3|registrador:inst|3~clear_lut                                                       ; combout          ;
+; |FCTarc01|a2b:inst2|registrador:inst|4~data_lut                                                   ; |FCTarc01|a2b:inst2|registrador:inst|4~data_lut                                                        ; combout          ;
+; |FCTarc01|a2b:inst2|registrador:inst|3~clear_lut                                                  ; |FCTarc01|a2b:inst2|registrador:inst|3~clear_lut                                                       ; combout          ;
+; |FCTarc01|b2b:inst3|registrador:inst|3~data_lut                                                   ; |FCTarc01|b2b:inst3|registrador:inst|3~data_lut                                                        ; combout          ;
+; |FCTarc01|mdr6b:inst4|registrador:inst2|4~_emulated                                               ; |FCTarc01|mdr6b:inst4|registrador:inst2|4~_emulated                                                    ; q                ;
+; |FCTarc01|mdr6b:inst4|registrador:inst2|4~head_lut                                                ; |FCTarc01|mdr6b:inst4|registrador:inst2|4~head_lut                                                     ; combout          ;
+; |FCTarc01|mdr6b:inst4|registrador:inst1|4~_emulated                                               ; |FCTarc01|mdr6b:inst4|registrador:inst1|4~_emulated                                                    ; q                ;
+; |FCTarc01|mdr6b:inst4|registrador:inst1|4~head_lut                                                ; |FCTarc01|mdr6b:inst4|registrador:inst1|4~head_lut                                                     ; combout          ;
+; |FCTarc01|mdr6b:inst4|registrador:inst2|3~_emulated                                               ; |FCTarc01|mdr6b:inst4|registrador:inst2|3~_emulated                                                    ; q                ;
+; |FCTarc01|mdr6b:inst4|registrador:inst2|3~head_lut                                                ; |FCTarc01|mdr6b:inst4|registrador:inst2|3~head_lut                                                     ; combout          ;
+; |FCTarc01|mdr6b:inst4|registrador:inst2|4~data_lut                                                ; |FCTarc01|mdr6b:inst4|registrador:inst2|4~data_lut                                                     ; combout          ;
+; |FCTarc01|mdr6b:inst4|registrador:inst2|3~clear_lut                                               ; |FCTarc01|mdr6b:inst4|registrador:inst2|3~clear_lut                                                    ; combout          ;
+; |FCTarc01|mdr6b:inst4|registrador:inst1|4~data_lut                                                ; |FCTarc01|mdr6b:inst4|registrador:inst1|4~data_lut                                                     ; combout          ;
+; |FCTarc01|mdr6b:inst4|registrador:inst2|3~data_lut                                                ; |FCTarc01|mdr6b:inst4|registrador:inst2|3~data_lut                                                     ; combout          ;
+; |FCTarc01|mar2b:inst7|registrador:inst|4~_emulated                                                ; |FCTarc01|mar2b:inst7|registrador:inst|4~_emulated                                                     ; q                ;
+; |FCTarc01|mar2b:inst7|registrador:inst|4~head_lut                                                 ; |FCTarc01|mar2b:inst7|registrador:inst|4~head_lut                                                      ; combout          ;
+; |FCTarc01|mar2b:inst7|registrador:inst|3~head_lut                                                 ; |FCTarc01|mar2b:inst7|registrador:inst|3~head_lut                                                      ; combout          ;
+; |FCTarc01|ic2b:inst9|lpm_counter:lpm_counter_component|cntr_16i:auto_generated|counter_reg_bit[0] ; |FCTarc01|ic2b:inst9|lpm_counter:lpm_counter_component|cntr_16i:auto_generated|counter_reg_bit[0]      ; q                ;
+; |FCTarc01|mar2b:inst7|registrador:inst|4~data_lut                                                 ; |FCTarc01|mar2b:inst7|registrador:inst|4~data_lut                                                      ; combout          ;
+; |FCTarc01|mar2b:inst7|registrador:inst|3~clear_lut                                                ; |FCTarc01|mar2b:inst7|registrador:inst|3~clear_lut                                                     ; combout          ;
+; |FCTarc01|mar2b:inst7|registrador:inst|3~data_lut                                                 ; |FCTarc01|mar2b:inst7|registrador:inst|3~data_lut                                                      ; combout          ;
+; |FCTarc01|out_1~output                                                                            ; |FCTarc01|out_1~output                                                                                 ; o                ;
+; |FCTarc01|out_1                                                                                   ; |FCTarc01|out_1                                                                                        ; padout           ;
+; |FCTarc01|out_0~output                                                                            ; |FCTarc01|out_0~output                                                                                 ; o                ;
+; |FCTarc01|out_0                                                                                   ; |FCTarc01|out_0                                                                                        ; padout           ;
+; |FCTarc01|clear_acc~input                                                                         ; |FCTarc01|clear_acc~input                                                                              ; o                ;
+; |FCTarc01|clear_acc                                                                               ; |FCTarc01|clear_acc                                                                                    ; padout           ;
+; |FCTarc01|trigger_acc~input                                                                       ; |FCTarc01|trigger_acc~input                                                                            ; o                ;
+; |FCTarc01|trigger_acc                                                                             ; |FCTarc01|trigger_acc                                                                                  ; padout           ;
+; |FCTarc01|clear_b~input                                                                           ; |FCTarc01|clear_b~input                                                                                ; o                ;
+; |FCTarc01|clear_b                                                                                 ; |FCTarc01|clear_b                                                                                      ; padout           ;
+; |FCTarc01|clear_a~input                                                                           ; |FCTarc01|clear_a~input                                                                                ; o                ;
+; |FCTarc01|clear_a                                                                                 ; |FCTarc01|clear_a                                                                                      ; padout           ;
+; |FCTarc01|trigger_b~input                                                                         ; |FCTarc01|trigger_b~input                                                                              ; o                ;
+; |FCTarc01|trigger_b                                                                               ; |FCTarc01|trigger_b                                                                                    ; padout           ;
+; |FCTarc01|trigger_a~input                                                                         ; |FCTarc01|trigger_a~input                                                                              ; o                ;
+; |FCTarc01|trigger_a                                                                               ; |FCTarc01|trigger_a                                                                                    ; padout           ;
+; |FCTarc01|clear_mdr~input                                                                         ; |FCTarc01|clear_mdr~input                                                                              ; o                ;
+; |FCTarc01|clear_mdr                                                                               ; |FCTarc01|clear_mdr                                                                                    ; padout           ;
+; |FCTarc01|trigger_mdr~input                                                                       ; |FCTarc01|trigger_mdr~input                                                                            ; o                ;
+; |FCTarc01|trigger_mdr                                                                             ; |FCTarc01|trigger_mdr                                                                                  ; padout           ;
+; |FCTarc01|clear_mar~input                                                                         ; |FCTarc01|clear_mar~input                                                                              ; o                ;
+; |FCTarc01|clear_mar                                                                               ; |FCTarc01|clear_mar                                                                                    ; padout           ;
+; |FCTarc01|trigger_mar~input                                                                       ; |FCTarc01|trigger_mar~input                                                                            ; o                ;
+; |FCTarc01|trigger_mar                                                                             ; |FCTarc01|trigger_mar                                                                                  ; padout           ;
+; |FCTarc01|trigger_ic~input                                                                        ; |FCTarc01|trigger_ic~input                                                                             ; o                ;
+; |FCTarc01|trigger_ic                                                                              ; |FCTarc01|trigger_ic                                                                                   ; padout           ;
+; |FCTarc01|clear_ic~input                                                                          ; |FCTarc01|clear_ic~input                                                                               ; o                ;
+; |FCTarc01|clear_ic                                                                                ; |FCTarc01|clear_ic                                                                                     ; padout           ;
+; |FCTarc01|trigger_mdr~inputclkctrl                                                                ; |FCTarc01|trigger_mdr~inputclkctrl                                                                     ; outclk           ;
+; |FCTarc01|trigger_a~inputclkctrl                                                                  ; |FCTarc01|trigger_a~inputclkctrl                                                                       ; outclk           ;
+; |FCTarc01|mdr6b:inst4|registrador:inst2|3~clear_lutclkctrl                                        ; |FCTarc01|mdr6b:inst4|registrador:inst2|3~clear_lutclkctrl                                             ; outclk           ;
+; |FCTarc01|trigger_b~inputclkctrl                                                                  ; |FCTarc01|trigger_b~inputclkctrl                                                                       ; outclk           ;
+; |FCTarc01|trigger_acc~inputclkctrl                                                                ; |FCTarc01|trigger_acc~inputclkctrl                                                                     ; outclk           ;
+; |FCTarc01|acc2b:inst1|registrador:inst|3~clear_lutclkctrl                                         ; |FCTarc01|acc2b:inst1|registrador:inst|3~clear_lutclkctrl                                              ; outclk           ;
+; |FCTarc01|mar2b:inst7|registrador:inst|3~clear_lutclkctrl                                         ; |FCTarc01|mar2b:inst7|registrador:inst|3~clear_lutclkctrl                                              ; outclk           ;
+; |FCTarc01|a2b:inst2|registrador:inst|3~clear_lutclkctrl                                           ; |FCTarc01|a2b:inst2|registrador:inst|3~clear_lutclkctrl                                                ; outclk           ;
+; |FCTarc01|b2b:inst3|registrador:inst|3~clear_lutclkctrl                                           ; |FCTarc01|b2b:inst3|registrador:inst|3~clear_lutclkctrl                                                ; outclk           ;
+; |FCTarc01|trigger_ic~inputclkctrl                                                                 ; |FCTarc01|trigger_ic~inputclkctrl                                                                      ; outclk           ;
+; |FCTarc01|trigger_mar~inputclkctrl                                                                ; |FCTarc01|trigger_mar~inputclkctrl                                                                     ; outclk           ;
+; |FCTarc01|clear_ic~inputclkctrl                                                                   ; |FCTarc01|clear_ic~inputclkctrl                                                                        ; outclk           ;
++---------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                     ;
++-----------------------------------------------------+-----------------------------------------------------+------------------+
+; Node Name                                           ; Output Port Name                                    ; Output Port Type ;
++-----------------------------------------------------+-----------------------------------------------------+------------------+
+; |FCTarc01|a2b:inst2|registrador:inst|3~_emulated    ; |FCTarc01|a2b:inst2|registrador:inst|3~_emulated    ; q                ;
+; |FCTarc01|a2b:inst2|registrador:inst|3~head_lut     ; |FCTarc01|a2b:inst2|registrador:inst|3~head_lut     ; combout          ;
+; |FCTarc01|a2b:inst2|registrador:inst|3~data_lut     ; |FCTarc01|a2b:inst2|registrador:inst|3~data_lut     ; combout          ;
+; |FCTarc01|mdr6b:inst4|registrador:inst1|3~_emulated ; |FCTarc01|mdr6b:inst4|registrador:inst1|3~_emulated ; q                ;
+; |FCTarc01|mdr6b:inst4|registrador:inst1|3~head_lut  ; |FCTarc01|mdr6b:inst4|registrador:inst1|3~head_lut  ; combout          ;
+; |FCTarc01|acc2b:inst1|registrador:inst|3~latch      ; |FCTarc01|acc2b:inst1|registrador:inst|3~latch      ; combout          ;
+; |FCTarc01|b2b:inst3|registrador:inst|3~latch        ; |FCTarc01|b2b:inst3|registrador:inst|3~latch        ; combout          ;
+; |FCTarc01|a2b:inst2|registrador:inst|3~latch        ; |FCTarc01|a2b:inst2|registrador:inst|3~latch        ; combout          ;
+; |FCTarc01|mdr6b:inst4|registrador:inst2|3~latch     ; |FCTarc01|mdr6b:inst4|registrador:inst2|3~latch     ; combout          ;
+; |FCTarc01|mar2b:inst7|registrador:inst|3~latch      ; |FCTarc01|mar2b:inst7|registrador:inst|3~latch      ; combout          ;
+; |FCTarc01|preset_acc~input                          ; |FCTarc01|preset_acc~input                          ; o                ;
+; |FCTarc01|preset_acc                                ; |FCTarc01|preset_acc                                ; padout           ;
+; |FCTarc01|preset_b~input                            ; |FCTarc01|preset_b~input                            ; o                ;
+; |FCTarc01|preset_b                                  ; |FCTarc01|preset_b                                  ; padout           ;
+; |FCTarc01|preset_a~input                            ; |FCTarc01|preset_a~input                            ; o                ;
+; |FCTarc01|preset_a                                  ; |FCTarc01|preset_a                                  ; padout           ;
+; |FCTarc01|preset_mdr~input                          ; |FCTarc01|preset_mdr~input                          ; o                ;
+; |FCTarc01|preset_mdr                                ; |FCTarc01|preset_mdr                                ; padout           ;
+; |FCTarc01|preset_mar~input                          ; |FCTarc01|preset_mar~input                          ; o                ;
+; |FCTarc01|preset_mar                                ; |FCTarc01|preset_mar                                ; padout           ;
++-----------------------------------------------------+-----------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                                                                                 ;
++---------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                         ; Output Port Name                                                                                  ; Output Port Type ;
++---------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+------------------+
+; |FCTarc01|a2b:inst2|registrador:inst|3~_emulated                                                  ; |FCTarc01|a2b:inst2|registrador:inst|3~_emulated                                                  ; q                ;
+; |FCTarc01|mdr6b:inst4|registrador:inst1|3~_emulated                                               ; |FCTarc01|mdr6b:inst4|registrador:inst1|3~_emulated                                               ; q                ;
+; |FCTarc01|mar2b:inst7|registrador:inst|3~_emulated                                                ; |FCTarc01|mar2b:inst7|registrador:inst|3~_emulated                                                ; q                ;
+; |FCTarc01|ic2b:inst9|lpm_counter:lpm_counter_component|cntr_16i:auto_generated|counter_reg_bit[1] ; |FCTarc01|ic2b:inst9|lpm_counter:lpm_counter_component|cntr_16i:auto_generated|counter_reg_bit[1] ; q                ;
+; |FCTarc01|preset_acc~input                                                                        ; |FCTarc01|preset_acc~input                                                                        ; o                ;
+; |FCTarc01|preset_acc                                                                              ; |FCTarc01|preset_acc                                                                              ; padout           ;
+; |FCTarc01|preset_b~input                                                                          ; |FCTarc01|preset_b~input                                                                          ; o                ;
+; |FCTarc01|preset_b                                                                                ; |FCTarc01|preset_b                                                                                ; padout           ;
+; |FCTarc01|preset_a~input                                                                          ; |FCTarc01|preset_a~input                                                                          ; o                ;
+; |FCTarc01|preset_a                                                                                ; |FCTarc01|preset_a                                                                                ; padout           ;
+; |FCTarc01|preset_mdr~input                                                                        ; |FCTarc01|preset_mdr~input                                                                        ; o                ;
+; |FCTarc01|preset_mdr                                                                              ; |FCTarc01|preset_mdr                                                                              ; padout           ;
+; |FCTarc01|preset_mar~input                                                                        ; |FCTarc01|preset_mar~input                                                                        ; o                ;
+; |FCTarc01|preset_mar                                                                              ; |FCTarc01|preset_mar                                                                              ; padout           ;
++---------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 132 02/25/2009 SJ Web Edition
+    Info: Processing started: Wed Jun 14 15:38:03 2017
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off FCTarc01 -c FCTarc01
+Info: Using vector source file "C:/Users/cc161255698/Desktop/FCTarc01/FCTarc01.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      78.22 %
+Info: Number of transitions in simulation is 268
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 158 megabytes
+    Info: Processing ended: Wed Jun 14 15:38:03 2017
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

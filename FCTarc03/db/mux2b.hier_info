@@ -1,0 +1,50 @@
+|mux2b
+out_1 <= inst31.DB_MAX_OUTPUT_PORT_TYPE
+in_E_1 => inst23.IN0
+mux_control_2 => dec3b:inst1.in_2
+mux_control_1 => dec3b:inst1.in_1
+mux_control_0 => dec3b:inst1.in_0
+in_A_1 => inst.IN0
+in_F_1 => inst25.IN0
+in_B_1 => inst17.IN0
+in_D_1 => inst21.IN0
+in_C_1 => inst19.IN0
+in_G_1 => inst27.IN0
+in_H_1 => inst29.IN0
+out_0 <= inst32.DB_MAX_OUTPUT_PORT_TYPE
+in_A_0 => inst16.IN0
+in_C_0 => inst20.IN0
+in_B_0 => inst18.IN0
+in_D_0 => inst22.IN0
+in_F_0 => inst26.IN0
+in_E_0 => inst24.IN0
+in_G_0 => inst28.IN0
+in_H_0 => inst30.IN0
+
+
+|mux2b|dec3b:inst1
+out_0 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+in_2 => inst.IN0
+in_2 => inst10.IN0
+in_2 => inst11.IN0
+in_2 => inst12.IN0
+in_2 => inst9.IN0
+in_1 => inst3.IN0
+in_1 => inst8.IN1
+in_1 => inst11.IN1
+in_1 => inst12.IN1
+in_0 => inst4.IN0
+in_0 => inst6.IN2
+in_0 => inst7.IN2
+in_0 => inst8.IN2
+in_0 => inst10.IN2
+in_0 => inst12.IN2
+out_1 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out_2 <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out_3 <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out_5 <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out_6 <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out_7 <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out_4 <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+

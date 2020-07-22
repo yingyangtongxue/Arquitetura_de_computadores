@@ -1,0 +1,29 @@
+|ula2b
+out_0 <= somador2bit:inst.out_0
+ain0 => somador2bit:inst.ain0
+bin0 => somador2bit:inst.bin0
+ain1 => somador2bit:inst.ain1
+bin1 => somador2bit:inst.bin1
+out_1 <= somador2bit:inst.out_1
+
+
+|ula2b|somador2bit:inst
+out_0 <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+Cin => inst7.IN0
+Cin => inst9.IN1
+ain0 => inst6.IN0
+ain0 => inst8.IN1
+ain0 => inst.IN0
+bin0 => inst6.IN1
+bin0 => inst8.IN0
+bin0 => inst.IN1
+out_1 <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+ain1 => inst11.IN0
+ain1 => inst13.IN1
+ain1 => inst2.IN0
+bin1 => inst11.IN1
+bin1 => inst13.IN0
+bin1 => inst2.IN1
+Cout <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+
+

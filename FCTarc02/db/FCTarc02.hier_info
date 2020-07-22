@@ -1,0 +1,384 @@
+|FCTarc02
+out_1 <= acc2b:inst1.out_1
+clock => inst11.IN0
+clock => mir8b:inst13.trigger
+reset => inst12.IN0
+out_0 <= acc2b:inst1.out_0
+
+
+|FCTarc02|acc2b:inst1
+out_1 <= registrador:inst.out_1
+in_1 => registrador:inst.in_1
+in_0 => registrador:inst.in_0
+trigger => registrador:inst.trigger
+preset => registrador:inst.preset
+clear => registrador:inst.clear
+out_0 <= registrador:inst.out_0
+
+
+|FCTarc02|acc2b:inst1|registrador:inst
+out_1 <= 3.DB_MAX_OUTPUT_PORT_TYPE
+preset => 6.IN0
+clear => 5.IN0
+in_1 => 13.IN0
+in_1 => 3~0.IN1
+trigger => 3.CLK
+trigger => 4.CLK
+out_0 <= 4.DB_MAX_OUTPUT_PORT_TYPE
+in_0 => 14.IN0
+in_0 => 4~0.IN1
+
+
+|FCTarc02|ula2b:inst
+out_0 <= somador2bit:inst.out_0
+ain0 => somador2bit:inst.ain0
+bin0 => somador2bit:inst.bin0
+ain1 => somador2bit:inst.ain1
+bin1 => somador2bit:inst.bin1
+out_1 <= somador2bit:inst.out_1
+
+
+|FCTarc02|ula2b:inst|somador2bit:inst
+out_0 <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+Cin => inst7.IN0
+Cin => inst9.IN1
+ain0 => inst6.IN0
+ain0 => inst8.IN1
+ain0 => inst.IN0
+bin0 => inst6.IN1
+bin0 => inst8.IN0
+bin0 => inst.IN1
+out_1 <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+ain1 => inst11.IN0
+ain1 => inst13.IN1
+ain1 => inst2.IN0
+bin1 => inst11.IN1
+bin1 => inst13.IN0
+bin1 => inst2.IN1
+Cout <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FCTarc02|a2b:inst2
+out_1 <= registrador:inst.out_1
+in_1 => registrador:inst.in_1
+in_0 => registrador:inst.in_0
+trigger => registrador:inst.trigger
+preset => registrador:inst.preset
+clear => registrador:inst.clear
+out_0 <= registrador:inst.out_0
+
+
+|FCTarc02|a2b:inst2|registrador:inst
+out_1 <= 3.DB_MAX_OUTPUT_PORT_TYPE
+preset => 6.IN0
+clear => 5.IN0
+in_1 => 13.IN0
+in_1 => 3~0.IN1
+trigger => 3.CLK
+trigger => 4.CLK
+out_0 <= 4.DB_MAX_OUTPUT_PORT_TYPE
+in_0 => 14.IN0
+in_0 => 4~0.IN1
+
+
+|FCTarc02|mdr6b:inst4
+out_5 <= registrador:inst.out_1
+in_5 => registrador:inst.in_1
+in_4 => registrador:inst.in_0
+trigger => registrador:inst.trigger
+trigger => registrador:inst1.trigger
+trigger => registrador:inst2.trigger
+preset => registrador:inst.preset
+preset => registrador:inst1.preset
+preset => registrador:inst2.preset
+clear => registrador:inst.clear
+clear => registrador:inst1.clear
+clear => registrador:inst2.clear
+out_4 <= registrador:inst.out_0
+out_3 <= registrador:inst1.out_1
+in_3 => registrador:inst1.in_1
+in_2 => registrador:inst1.in_0
+out_2 <= registrador:inst1.out_0
+out_1 <= registrador:inst2.out_1
+in_1 => registrador:inst2.in_1
+in_0 => registrador:inst2.in_0
+out_0 <= registrador:inst2.out_0
+
+
+|FCTarc02|mdr6b:inst4|registrador:inst
+out_1 <= 3.DB_MAX_OUTPUT_PORT_TYPE
+preset => 6.IN0
+clear => 5.IN0
+in_1 => 13.IN0
+in_1 => 3~0.IN1
+trigger => 3.CLK
+trigger => 4.CLK
+out_0 <= 4.DB_MAX_OUTPUT_PORT_TYPE
+in_0 => 14.IN0
+in_0 => 4~0.IN1
+
+
+|FCTarc02|mdr6b:inst4|registrador:inst1
+out_1 <= 3.DB_MAX_OUTPUT_PORT_TYPE
+preset => 6.IN0
+clear => 5.IN0
+in_1 => 13.IN0
+in_1 => 3~0.IN1
+trigger => 3.CLK
+trigger => 4.CLK
+out_0 <= 4.DB_MAX_OUTPUT_PORT_TYPE
+in_0 => 14.IN0
+in_0 => 4~0.IN1
+
+
+|FCTarc02|mdr6b:inst4|registrador:inst2
+out_1 <= 3.DB_MAX_OUTPUT_PORT_TYPE
+preset => 6.IN0
+clear => 5.IN0
+in_1 => 13.IN0
+in_1 => 3~0.IN1
+trigger => 3.CLK
+trigger => 4.CLK
+out_0 <= 4.DB_MAX_OUTPUT_PORT_TYPE
+in_0 => 14.IN0
+in_0 => 4~0.IN1
+
+
+|FCTarc02|rom2b:inst5
+a[0] => Equal0.IN0
+a[0] => Equal1.IN0
+a[0] => Equal2.IN1
+a[0] => Equal3.IN0
+a[1] => Equal0.IN1
+a[1] => Equal1.IN1
+a[1] => Equal2.IN0
+a[1] => Equal3.IN1
+x[0] <= x[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+x[1] <= x[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+x[2] <= x[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+x[3] <= <GND>
+x[4] <= <VCC>
+
+
+|FCTarc02|mar2b:inst7
+out_1 <= registrador:inst.out_1
+in_1 => registrador:inst.in_1
+in_0 => registrador:inst.in_0
+trigger => registrador:inst.trigger
+preset => registrador:inst.preset
+clear => registrador:inst.clear
+out_0 <= registrador:inst.out_0
+
+
+|FCTarc02|mar2b:inst7|registrador:inst
+out_1 <= 3.DB_MAX_OUTPUT_PORT_TYPE
+preset => 6.IN0
+clear => 5.IN0
+in_1 => 13.IN0
+in_1 => 3~0.IN1
+trigger => 3.CLK
+trigger => 4.CLK
+out_0 <= 4.DB_MAX_OUTPUT_PORT_TYPE
+in_0 => 14.IN0
+in_0 => 4~0.IN1
+
+
+|FCTarc02|ic2b:inst9
+aclr => lpm_counter:lpm_counter_component.aclr
+clock => lpm_counter:lpm_counter_component.clock
+q[0] <= lpm_counter:lpm_counter_component.q[0]
+q[1] <= lpm_counter:lpm_counter_component.q[1]
+
+
+|FCTarc02|ic2b:inst9|lpm_counter:lpm_counter_component
+clock => cntr_16i:auto_generated.clock
+clk_en => ~NO_FANOUT~
+cnt_en => ~NO_FANOUT~
+updown => ~NO_FANOUT~
+aclr => cntr_16i:auto_generated.aclr
+aset => ~NO_FANOUT~
+aconst => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => ~NO_FANOUT~
+sset => ~NO_FANOUT~
+sconst => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+data[0] => ~NO_FANOUT~
+data[1] => ~NO_FANOUT~
+cin => ~NO_FANOUT~
+q[0] <= cntr_16i:auto_generated.q[0]
+q[1] <= cntr_16i:auto_generated.q[1]
+cout <= <GND>
+eq[0] <= <GND>
+eq[1] <= <GND>
+eq[2] <= <GND>
+eq[3] <= <GND>
+eq[4] <= <GND>
+eq[5] <= <GND>
+eq[6] <= <GND>
+eq[7] <= <GND>
+eq[8] <= <GND>
+eq[9] <= <GND>
+eq[10] <= <GND>
+eq[11] <= <GND>
+eq[12] <= <GND>
+eq[13] <= <GND>
+eq[14] <= <GND>
+eq[15] <= <GND>
+
+
+|FCTarc02|ic2b:inst9|lpm_counter:lpm_counter_component|cntr_16i:auto_generated
+clock => counter_reg_bit[1].CLK
+clock => counter_reg_bit[0].CLK
+q[0] <= counter_reg_bit[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= counter_reg_bit[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FCTarc02|mir8b:inst13
+out_1 <= registrador:inst3.out_1
+in_1 => registrador:inst3.in_1
+in_0 => registrador:inst3.in_0
+trigger => registrador:inst3.trigger
+trigger => registrador:inst2.trigger
+trigger => registrador:inst1.trigger
+trigger => registrador:inst.trigger
+preset => registrador:inst3.preset
+preset => registrador:inst2.preset
+preset => registrador:inst1.preset
+preset => registrador:inst.preset
+clear => registrador:inst3.clear
+clear => registrador:inst2.clear
+clear => registrador:inst1.clear
+clear => registrador:inst.clear
+out_0 <= registrador:inst3.out_0
+out_2 <= registrador:inst2.out_0
+in_3 => registrador:inst2.in_1
+in_2 => registrador:inst2.in_0
+out_3 <= registrador:inst2.out_1
+out_4 <= registrador:inst1.out_0
+in_5 => registrador:inst1.in_1
+in_4 => registrador:inst1.in_0
+out_5 <= registrador:inst1.out_1
+out_6 <= registrador:inst.out_0
+in_7 => registrador:inst.in_1
+in_6 => registrador:inst.in_0
+out_7 <= registrador:inst.out_1
+
+
+|FCTarc02|mir8b:inst13|registrador:inst3
+out_1 <= 3.DB_MAX_OUTPUT_PORT_TYPE
+preset => 6.IN0
+clear => 5.IN0
+in_1 => 13.IN0
+in_1 => 3~0.IN1
+trigger => 3.CLK
+trigger => 4.CLK
+out_0 <= 4.DB_MAX_OUTPUT_PORT_TYPE
+in_0 => 14.IN0
+in_0 => 4~0.IN1
+
+
+|FCTarc02|mir8b:inst13|registrador:inst2
+out_1 <= 3.DB_MAX_OUTPUT_PORT_TYPE
+preset => 6.IN0
+clear => 5.IN0
+in_1 => 13.IN0
+in_1 => 3~0.IN1
+trigger => 3.CLK
+trigger => 4.CLK
+out_0 <= 4.DB_MAX_OUTPUT_PORT_TYPE
+in_0 => 14.IN0
+in_0 => 4~0.IN1
+
+
+|FCTarc02|mir8b:inst13|registrador:inst1
+out_1 <= 3.DB_MAX_OUTPUT_PORT_TYPE
+preset => 6.IN0
+clear => 5.IN0
+in_1 => 13.IN0
+in_1 => 3~0.IN1
+trigger => 3.CLK
+trigger => 4.CLK
+out_0 <= 4.DB_MAX_OUTPUT_PORT_TYPE
+in_0 => 14.IN0
+in_0 => 4~0.IN1
+
+
+|FCTarc02|mir8b:inst13|registrador:inst
+out_1 <= 3.DB_MAX_OUTPUT_PORT_TYPE
+preset => 6.IN0
+clear => 5.IN0
+in_1 => 13.IN0
+in_1 => 3~0.IN1
+trigger => 3.CLK
+trigger => 4.CLK
+out_0 <= 4.DB_MAX_OUTPUT_PORT_TYPE
+in_0 => 14.IN0
+in_0 => 4~0.IN1
+
+
+|FCTarc02|cu2b:inst10
+in_cu[0] => Equal0.IN0
+in_cu[0] => Equal1.IN0
+in_cu[0] => Equal2.IN1
+in_cu[0] => Equal3.IN0
+in_cu[1] => Equal0.IN1
+in_cu[1] => Equal1.IN1
+in_cu[1] => Equal2.IN0
+in_cu[1] => Equal3.IN1
+out_cu[0] <= out_cu[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out_cu[1] <= out_cu[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out_cu[2] <= <GND>
+out_cu[3] <= <GND>
+out_cu[4] <= <GND>
+out_cu[5] <= out_cu[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out_cu[6] <= out_cu[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out_cu[7] <= out_cu[7]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FCTarc02|ir2b:inst8
+out_1 <= registrador:inst.out_1
+in_1 => registrador:inst.in_1
+in_0 => registrador:inst.in_0
+trigger => registrador:inst.trigger
+preset => registrador:inst.preset
+clear => registrador:inst.clear
+out_0 <= registrador:inst.out_0
+
+
+|FCTarc02|ir2b:inst8|registrador:inst
+out_1 <= 3.DB_MAX_OUTPUT_PORT_TYPE
+preset => 6.IN0
+clear => 5.IN0
+in_1 => 13.IN0
+in_1 => 3~0.IN1
+trigger => 3.CLK
+trigger => 4.CLK
+out_0 <= 4.DB_MAX_OUTPUT_PORT_TYPE
+in_0 => 14.IN0
+in_0 => 4~0.IN1
+
+
+|FCTarc02|b2b:inst3
+out_1 <= registrador:inst.out_1
+in_1 => registrador:inst.in_1
+in_0 => registrador:inst.in_0
+trigger => registrador:inst.trigger
+preset => registrador:inst.preset
+clear => registrador:inst.clear
+out_0 <= registrador:inst.out_0
+
+
+|FCTarc02|b2b:inst3|registrador:inst
+out_1 <= 3.DB_MAX_OUTPUT_PORT_TYPE
+preset => 6.IN0
+clear => 5.IN0
+in_1 => 13.IN0
+in_1 => 3~0.IN1
+trigger => 3.CLK
+trigger => 4.CLK
+out_0 <= 4.DB_MAX_OUTPUT_PORT_TYPE
+in_0 => 14.IN0
+in_0 => 4~0.IN1
+
+

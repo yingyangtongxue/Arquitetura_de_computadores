@@ -1,0 +1,62 @@
+Version 9.0 Build 132 02/25/2009 SJ Web Edition
+10
+767
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+b2b
+# storage
+db|b2b.(0).cnf
+db|b2b.(0).cnf
+# case_insensitive
+# source_file
+b2b.bdf
+5f611d54ed758742f39c4b4ac2f192d
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+registrador
+# storage
+db|b2b.(1).cnf
+db|b2b.(1).cnf
+# case_insensitive
+# source_file
+registrador.bdf
+bc739e858ad7b0157e6cc597c1df9eb7
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+registrador:inst
+}
+# macro_sequence
+
+# end
+# complete
+

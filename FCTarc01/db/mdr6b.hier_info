@@ -1,0 +1,63 @@
+|mdr6b
+out_5 <= registrador:inst.out_1
+in_5 => registrador:inst.in_1
+in_4 => registrador:inst.in_0
+trigger => registrador:inst.trigger
+trigger => registrador:inst1.trigger
+trigger => registrador:inst2.trigger
+preset => registrador:inst.preset
+preset => registrador:inst1.preset
+preset => registrador:inst2.preset
+clear => registrador:inst.clear
+clear => registrador:inst1.clear
+clear => registrador:inst2.clear
+out_4 <= registrador:inst.out_0
+out_3 <= registrador:inst1.out_1
+in_3 => registrador:inst1.in_1
+in_2 => registrador:inst1.in_0
+out_2 <= registrador:inst1.out_0
+out_1 <= registrador:inst2.out_1
+in_1 => registrador:inst2.in_1
+in_0 => registrador:inst2.in_0
+out_0 <= registrador:inst2.out_0
+
+
+|mdr6b|registrador:inst
+out_1 <= 3.DB_MAX_OUTPUT_PORT_TYPE
+preset => 6.IN0
+clear => 5.IN0
+in_1 => 13.IN0
+in_1 => 3~0.IN1
+trigger => 3.CLK
+trigger => 4.CLK
+out_0 <= 4.DB_MAX_OUTPUT_PORT_TYPE
+in_0 => 14.IN0
+in_0 => 4~0.IN1
+
+
+|mdr6b|registrador:inst1
+out_1 <= 3.DB_MAX_OUTPUT_PORT_TYPE
+preset => 6.IN0
+clear => 5.IN0
+in_1 => 13.IN0
+in_1 => 3~0.IN1
+trigger => 3.CLK
+trigger => 4.CLK
+out_0 <= 4.DB_MAX_OUTPUT_PORT_TYPE
+in_0 => 14.IN0
+in_0 => 4~0.IN1
+
+
+|mdr6b|registrador:inst2
+out_1 <= 3.DB_MAX_OUTPUT_PORT_TYPE
+preset => 6.IN0
+clear => 5.IN0
+in_1 => 13.IN0
+in_1 => 3~0.IN1
+trigger => 3.CLK
+trigger => 4.CLK
+out_0 <= 4.DB_MAX_OUTPUT_PORT_TYPE
+in_0 => 14.IN0
+in_0 => 4~0.IN1
+
+

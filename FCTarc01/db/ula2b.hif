@@ -1,0 +1,62 @@
+Version 9.0 Build 132 02/25/2009 SJ Web Edition
+10
+767
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+ula2b
+# storage
+db|ula2b.(0).cnf
+db|ula2b.(0).cnf
+# case_insensitive
+# source_file
+ula2b.bdf
+b14e1f786cec3da2f56f36626ee824
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+somador2bit
+# storage
+db|ula2b.(1).cnf
+db|ula2b.(1).cnf
+# case_insensitive
+# source_file
+somador2bit.bdf
+53bde04083b9e7758e693ad13a70b269
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+somador2bit:inst
+}
+# macro_sequence
+
+# end
+# complete
+

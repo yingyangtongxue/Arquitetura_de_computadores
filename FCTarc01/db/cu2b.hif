@@ -1,0 +1,62 @@
+Version 9.0 Build 132 02/25/2009 SJ Web Edition
+10
+767
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+cu2b
+# storage
+db|cu2b.(0).cnf
+db|cu2b.(0).cnf
+# case_insensitive
+# source_file
+cu2b.bdf
+ffe8f91a1ac1ccabd346dcd4c78d91d5
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+dec2b
+# storage
+db|cu2b.(1).cnf
+db|cu2b.(1).cnf
+# case_insensitive
+# source_file
+dec2b.bdf
+8c7dda1cc8f117be48206d281cab4ee4
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+dec2b:inst
+}
+# macro_sequence
+
+# end
+# complete
+

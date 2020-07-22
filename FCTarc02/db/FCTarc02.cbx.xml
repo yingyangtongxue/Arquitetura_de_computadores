@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="FCTarc02">
+		<CBX_INST_ENTRY INSTANCE_NAME="|FCTarc02|ic2b:inst9|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_16i.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

@@ -1,0 +1,1357 @@
+TimeQuest Timing Analyzer report for FCTarc03
+Mon Jul 17 15:55:46 2017
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Slow 1200mV 85C Model Setup Summary
+  7. Slow 1200mV 85C Model Hold Summary
+  8. Slow 1200mV 85C Model Recovery Summary
+  9. Slow 1200mV 85C Model Removal Summary
+ 10. Slow 1200mV 85C Model Minimum Pulse Width
+ 11. Setup Times
+ 12. Hold Times
+ 13. Clock to Output Times
+ 14. Minimum Clock to Output Times
+ 15. Slow 1200mV 0C Model Fmax Summary
+ 16. Slow 1200mV 0C Model Setup Summary
+ 17. Slow 1200mV 0C Model Hold Summary
+ 18. Slow 1200mV 0C Model Recovery Summary
+ 19. Slow 1200mV 0C Model Removal Summary
+ 20. Slow 1200mV 0C Model Minimum Pulse Width
+ 21. Setup Times
+ 22. Hold Times
+ 23. Clock to Output Times
+ 24. Minimum Clock to Output Times
+ 25. Fast 1200mV 0C Model Setup Summary
+ 26. Fast 1200mV 0C Model Hold Summary
+ 27. Fast 1200mV 0C Model Recovery Summary
+ 28. Fast 1200mV 0C Model Removal Summary
+ 29. Fast 1200mV 0C Model Minimum Pulse Width
+ 30. Setup Times
+ 31. Hold Times
+ 32. Clock to Output Times
+ 33. Minimum Clock to Output Times
+ 34. Multicorner Timing Analysis Summary
+ 35. Setup Times
+ 36. Hold Times
+ 37. Clock to Output Times
+ 38. Minimum Clock to Output Times
+ 39. Board Trace Model Assignments
+ 40. Input Transition Times
+ 41. Slow Corner Signal Integrity Metrics
+ 42. Fast Corner Signal Integrity Metrics
+ 43. Setup Transfers
+ 44. Hold Transfers
+ 45. Recovery Transfers
+ 46. Removal Transfers
+ 47. Report TCCS
+ 48. Report RSKM
+ 49. Unconstrained Paths
+ 50. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                    ;
++--------------------+-------------------------------------------------+
+; Quartus II Version ; Version 9.0 Build 132 02/25/2009 SJ Web Edition ;
+; Revision Name      ; FCTarc03                                        ;
+; Device Family      ; Cyclone III                                     ;
+; Device Name        ; EP3C16F484C6                                    ;
+; Timing Models      ; Final                                           ;
+; Delay Model        ; Combined                                        ;
+; Rise/Fall Delays   ; Enabled                                         ;
++--------------------+-------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                             ;
++----------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------------------+
+; Clock Name                       ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                              ;
++----------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------------------+
+; clock                            ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clock }                            ;
+; mir8b:inst13|registrador:inst1|3 ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { mir8b:inst13|registrador:inst1|3 } ;
+; mir8b:inst13|registrador:inst1|4 ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { mir8b:inst13|registrador:inst1|4 } ;
+; mir8b:inst13|registrador:inst2|3 ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { mir8b:inst13|registrador:inst2|3 } ;
+; mir8b:inst13|registrador:inst2|4 ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { mir8b:inst13|registrador:inst2|4 } ;
+; mir8b:inst13|registrador:inst3|3 ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { mir8b:inst13|registrador:inst3|3 } ;
+; mir8b:inst13|registrador:inst|4  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { mir8b:inst13|registrador:inst|4 }  ;
++----------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                                                                                              ;
++------------+-----------------+----------------------------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name                       ; Note                                                          ;
++------------+-----------------+----------------------------------+---------------------------------------------------------------+
+; 324.04 MHz ; 250.0 MHz       ; clock                            ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 690.13 MHz ; 500.0 MHz       ; mir8b:inst13|registrador:inst2|4 ; limit due to minimum period restriction (tmin)                ;
++------------+-----------------+----------------------------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-----------------------------------------------------------+
+; Slow 1200mV 85C Model Setup Summary                       ;
++----------------------------------+--------+---------------+
+; Clock                            ; Slack  ; End Point TNS ;
++----------------------------------+--------+---------------+
+; clock                            ; -1.043 ; -7.163        ;
+; mir8b:inst13|registrador:inst|4  ; -0.635 ; -0.990        ;
+; mir8b:inst13|registrador:inst2|4 ; -0.449 ; -0.501        ;
+; mir8b:inst13|registrador:inst2|3 ; 0.014  ; 0.000         ;
+; mir8b:inst13|registrador:inst1|4 ; 0.266  ; 0.000         ;
+; mir8b:inst13|registrador:inst3|3 ; 0.325  ; 0.000         ;
++----------------------------------+--------+---------------+
+
+
++-----------------------------------------------------------+
+; Slow 1200mV 85C Model Hold Summary                        ;
++----------------------------------+--------+---------------+
+; Clock                            ; Slack  ; End Point TNS ;
++----------------------------------+--------+---------------+
+; mir8b:inst13|registrador:inst3|3 ; -0.109 ; -0.109        ;
+; mir8b:inst13|registrador:inst1|4 ; 0.229  ; 0.000         ;
+; mir8b:inst13|registrador:inst2|4 ; 0.379  ; 0.000         ;
+; mir8b:inst13|registrador:inst2|3 ; 0.462  ; 0.000         ;
+; clock                            ; 0.715  ; 0.000         ;
+; mir8b:inst13|registrador:inst|4  ; 0.810  ; 0.000         ;
++----------------------------------+--------+---------------+
+
+
++----------------------------------------------------------+
+; Slow 1200mV 85C Model Recovery Summary                   ;
++----------------------------------+-------+---------------+
+; Clock                            ; Slack ; End Point TNS ;
++----------------------------------+-------+---------------+
+; mir8b:inst13|registrador:inst1|3 ; 0.020 ; 0.000         ;
++----------------------------------+-------+---------------+
+
+
++----------------------------------------------------------+
+; Slow 1200mV 85C Model Removal Summary                    ;
++----------------------------------+-------+---------------+
+; Clock                            ; Slack ; End Point TNS ;
++----------------------------------+-------+---------------+
+; mir8b:inst13|registrador:inst1|3 ; 0.510 ; 0.000         ;
++----------------------------------+-------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width                                                                                                                                                                   ;
++--------+--------------+----------------+-------+------------------+----------------------------------+------------+-----------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; CCPP  ; Type             ; Clock                            ; Clock Edge ; Target                                                                                  ;
++--------+--------------+----------------+-------+------------------+----------------------------------+------------+-----------------------------------------------------------------------------------------+
+; -3.000 ; 1.000        ; 4.000          ; 0.000 ; Port Rate        ; clock                            ; Rise       ; clock                                                                                   ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; mir8b:inst13|registrador:inst1|4 ; Rise       ; a2b:inst2|registrador:inst|3                                                            ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; mir8b:inst13|registrador:inst1|4 ; Rise       ; a2b:inst2|registrador:inst|4                                                            ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; mir8b:inst13|registrador:inst3|3 ; Rise       ; acc2b:inst1|registrador:inst|3                                                          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; mir8b:inst13|registrador:inst3|3 ; Rise       ; acc2b:inst1|registrador:inst|4                                                          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; mir8b:inst13|registrador:inst2|3 ; Rise       ; b2b:inst3|registrador:inst|3                                                            ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; mir8b:inst13|registrador:inst2|3 ; Rise       ; b2b:inst3|registrador:inst|4                                                            ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; mir8b:inst13|registrador:inst2|4 ; Rise       ; ic2b:inst9|lpm_counter:lpm_counter_component|cntr_16i:auto_generated|counter_reg_bit[0] ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; mir8b:inst13|registrador:inst2|4 ; Rise       ; ic2b:inst9|lpm_counter:lpm_counter_component|cntr_16i:auto_generated|counter_reg_bit[1] ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; clock                            ; Fall       ; ir2b:inst8|registrador:inst|3                                                           ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; clock                            ; Fall       ; ir2b:inst8|registrador:inst|4                                                           ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; mir8b:inst13|registrador:inst|4  ; Rise       ; mar2b:inst7|registrador:inst|3                                                          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; mir8b:inst13|registrador:inst|4  ; Rise       ; mar2b:inst7|registrador:inst|4                                                          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; mir8b:inst13|registrador:inst1|3 ; Rise       ; mdr6b:inst4|registrador:inst1|3                                                         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; mir8b:inst13|registrador:inst1|3 ; Rise       ; mdr6b:inst4|registrador:inst1|4                                                         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; mir8b:inst13|registrador:inst1|3 ; Rise       ; mdr6b:inst4|registrador:inst2|3                                                         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; mir8b:inst13|registrador:inst1|3 ; Rise       ; mdr6b:inst4|registrador:inst2|4                                                         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; mir8b:inst13|registrador:inst1|3 ; Rise       ; mdr6b:inst4|registrador:inst|4                                                          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; clock                            ; Rise       ; mir8b:inst13|registrador:inst1|3                                                        ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; clock                            ; Rise       ; mir8b:inst13|registrador:inst1|4                                                        ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; clock                            ; Rise       ; mir8b:inst13|registrador:inst2|3                                                        ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; clock                            ; Rise       ; mir8b:inst13|registrador:inst2|4                                                        ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; clock                            ; Rise       ; mir8b:inst13|registrador:inst3|3                                                        ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; clock                            ; Rise       ; mir8b:inst13|registrador:inst3|4                                                        ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; clock                            ; Rise       ; mir8b:inst13|registrador:inst|3                                                         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; clock                            ; Rise       ; mir8b:inst13|registrador:inst|4                                                         ;
+; 0.137  ; 0.269        ; 0.216          ; 0.084 ; High Pulse Width ; clock                            ; Fall       ; ir2b:inst8|registrador:inst|3                                                           ;
+; 0.137  ; 0.269        ; 0.216          ; 0.084 ; High Pulse Width ; clock                            ; Fall       ; ir2b:inst8|registrador:inst|4                                                           ;
+; 0.184  ; 0.213        ; 0.184          ; 0.155 ; Low Pulse Width  ; mir8b:inst13|registrador:inst3|3 ; Rise       ; acc2b:inst1|registrador:inst|3                                                          ;
+; 0.184  ; 0.213        ; 0.184          ; 0.155 ; Low Pulse Width  ; mir8b:inst13|registrador:inst3|3 ; Rise       ; acc2b:inst1|registrador:inst|4                                                          ;
+; 0.185  ; 0.286        ; 0.184          ; 0.083 ; Low Pulse Width  ; clock                            ; Rise       ; mir8b:inst13|registrador:inst1|3                                                        ;
+; 0.185  ; 0.286        ; 0.184          ; 0.083 ; Low Pulse Width  ; clock                            ; Rise       ; mir8b:inst13|registrador:inst1|4                                                        ;
+; 0.185  ; 0.286        ; 0.184          ; 0.083 ; Low Pulse Width  ; clock                            ; Rise       ; mir8b:inst13|registrador:inst2|3                                                        ;
+; 0.185  ; 0.286        ; 0.184          ; 0.083 ; Low Pulse Width  ; clock                            ; Rise       ; mir8b:inst13|registrador:inst2|4                                                        ;
+; 0.185  ; 0.286        ; 0.184          ; 0.083 ; Low Pulse Width  ; clock                            ; Rise       ; mir8b:inst13|registrador:inst3|3                                                        ;
+; 0.185  ; 0.286        ; 0.184          ; 0.083 ; Low Pulse Width  ; clock                            ; Rise       ; mir8b:inst13|registrador:inst3|4                                                        ;
+; 0.185  ; 0.286        ; 0.184          ; 0.083 ; Low Pulse Width  ; clock                            ; Rise       ; mir8b:inst13|registrador:inst|3                                                         ;
+; 0.185  ; 0.286        ; 0.184          ; 0.083 ; Low Pulse Width  ; clock                            ; Rise       ; mir8b:inst13|registrador:inst|4                                                         ;
+; 0.228  ; 0.249        ; 0.184          ; 0.163 ; Low Pulse Width  ; mir8b:inst13|registrador:inst2|4 ; Rise       ; ic2b:inst9|lpm_counter:lpm_counter_component|cntr_16i:auto_generated|counter_reg_bit[0] ;
+; 0.228  ; 0.249        ; 0.184          ; 0.163 ; Low Pulse Width  ; mir8b:inst13|registrador:inst2|4 ; Rise       ; ic2b:inst9|lpm_counter:lpm_counter_component|cntr_16i:auto_generated|counter_reg_bit[1] ;
+; 0.250  ; 0.303        ; 0.184          ; 0.131 ; Low Pulse Width  ; mir8b:inst13|registrador:inst1|3 ; Rise       ; mdr6b:inst4|registrador:inst1|3                                                         ;
+; 0.250  ; 0.303        ; 0.184          ; 0.131 ; Low Pulse Width  ; mir8b:inst13|registrador:inst1|3 ; Rise       ; mdr6b:inst4|registrador:inst1|4                                                         ;
+; 0.250  ; 0.303        ; 0.184          ; 0.131 ; Low Pulse Width  ; mir8b:inst13|registrador:inst1|3 ; Rise       ; mdr6b:inst4|registrador:inst2|3                                                         ;
+; 0.250  ; 0.303        ; 0.184          ; 0.131 ; Low Pulse Width  ; mir8b:inst13|registrador:inst1|3 ; Rise       ; mdr6b:inst4|registrador:inst2|4                                                         ;
+; 0.250  ; 0.303        ; 0.184          ; 0.131 ; Low Pulse Width  ; mir8b:inst13|registrador:inst1|3 ; Rise       ; mdr6b:inst4|registrador:inst|4                                                          ;
+; 0.254  ; 0.307        ; 0.184          ; 0.131 ; Low Pulse Width  ; mir8b:inst13|registrador:inst2|3 ; Rise       ; b2b:inst3|registrador:inst|3                                                            ;
+; 0.254  ; 0.307        ; 0.184          ; 0.131 ; Low Pulse Width  ; mir8b:inst13|registrador:inst2|3 ; Rise       ; b2b:inst3|registrador:inst|4                                                            ;
+; 0.270  ; 0.312        ; 0.184          ; 0.142 ; Low Pulse Width  ; mir8b:inst13|registrador:inst|4  ; Rise       ; mar2b:inst7|registrador:inst|3                                                          ;
+; 0.270  ; 0.312        ; 0.184          ; 0.142 ; Low Pulse Width  ; mir8b:inst13|registrador:inst|4  ; Rise       ; mar2b:inst7|registrador:inst|4                                                          ;
+; 0.280  ; 0.329        ; 0.184          ; 0.135 ; Low Pulse Width  ; mir8b:inst13|registrador:inst1|4 ; Rise       ; a2b:inst2|registrador:inst|3                                                            ;
+; 0.280  ; 0.329        ; 0.184          ; 0.135 ; Low Pulse Width  ; mir8b:inst13|registrador:inst1|4 ; Rise       ; a2b:inst2|registrador:inst|4                                                            ;
+; 0.317  ; 0.398        ; 0.216          ; 0.135 ; High Pulse Width ; mir8b:inst13|registrador:inst1|4 ; Rise       ; a2b:inst2|registrador:inst|3                                                            ;
+; 0.317  ; 0.398        ; 0.216          ; 0.135 ; High Pulse Width ; mir8b:inst13|registrador:inst1|4 ; Rise       ; a2b:inst2|registrador:inst|4                                                            ;
+; 0.324  ; 0.398        ; 0.216          ; 0.142 ; High Pulse Width ; mir8b:inst13|registrador:inst|4  ; Rise       ; mar2b:inst7|registrador:inst|3                                                          ;
+; 0.324  ; 0.398        ; 0.216          ; 0.142 ; High Pulse Width ; mir8b:inst13|registrador:inst|4  ; Rise       ; mar2b:inst7|registrador:inst|4                                                          ;
+; 0.339  ; 0.339        ; 0.000          ; 0.000 ; Low Pulse Width  ; clock                            ; Rise       ; clock~input|o                                                                           ;
+; 0.340  ; 0.425        ; 0.216          ; 0.131 ; High Pulse Width ; mir8b:inst13|registrador:inst2|3 ; Rise       ; b2b:inst3|registrador:inst|3                                                            ;
+; 0.340  ; 0.425        ; 0.216          ; 0.131 ; High Pulse Width ; mir8b:inst13|registrador:inst2|3 ; Rise       ; b2b:inst3|registrador:inst|4                                                            ;
+; 0.343  ; 0.428        ; 0.216          ; 0.131 ; High Pulse Width ; mir8b:inst13|registrador:inst1|3 ; Rise       ; mdr6b:inst4|registrador:inst1|3                                                         ;
+; 0.343  ; 0.428        ; 0.216          ; 0.131 ; High Pulse Width ; mir8b:inst13|registrador:inst1|3 ; Rise       ; mdr6b:inst4|registrador:inst1|4                                                         ;
+; 0.343  ; 0.428        ; 0.216          ; 0.131 ; High Pulse Width ; mir8b:inst13|registrador:inst1|3 ; Rise       ; mdr6b:inst4|registrador:inst2|3                                                         ;
+; 0.343  ; 0.428        ; 0.216          ; 0.131 ; High Pulse Width ; mir8b:inst13|registrador:inst1|3 ; Rise       ; mdr6b:inst4|registrador:inst2|4                                                         ;
+; 0.343  ; 0.428        ; 0.216          ; 0.131 ; High Pulse Width ; mir8b:inst13|registrador:inst1|3 ; Rise       ; mdr6b:inst4|registrador:inst|4                                                          ;
+; 0.346  ; 0.229        ; 0.000          ; 0.117 ; Low Pulse Width  ; mir8b:inst13|registrador:inst3|3 ; Rise       ; inst1|inst|3|clk                                                                        ;
+; 0.346  ; 0.229        ; 0.000          ; 0.117 ; Low Pulse Width  ; mir8b:inst13|registrador:inst3|3 ; Rise       ; inst1|inst|4|clk                                                                        ;
+; 0.347  ; 0.302        ; 0.000          ; 0.045 ; Low Pulse Width  ; clock                            ; Rise       ; inst13|inst1|3|clk                                                                      ;
+; 0.347  ; 0.302        ; 0.000          ; 0.045 ; Low Pulse Width  ; clock                            ; Rise       ; inst13|inst1|4|clk                                                                      ;
+; 0.347  ; 0.302        ; 0.000          ; 0.045 ; Low Pulse Width  ; clock                            ; Rise       ; inst13|inst2|3|clk                                                                      ;
+; 0.347  ; 0.302        ; 0.000          ; 0.045 ; Low Pulse Width  ; clock                            ; Rise       ; inst13|inst2|4|clk                                                                      ;
+; 0.347  ; 0.302        ; 0.000          ; 0.045 ; Low Pulse Width  ; clock                            ; Rise       ; inst13|inst3|3|clk                                                                      ;
+; 0.347  ; 0.302        ; 0.000          ; 0.045 ; Low Pulse Width  ; clock                            ; Rise       ; inst13|inst3|4|clk                                                                      ;
+; 0.347  ; 0.302        ; 0.000          ; 0.045 ; Low Pulse Width  ; clock                            ; Rise       ; inst13|inst|3|clk                                                                       ;
+; 0.347  ; 0.302        ; 0.000          ; 0.045 ; Low Pulse Width  ; clock                            ; Rise       ; inst13|inst|4|clk                                                                       ;
+; 0.347  ; 0.302        ; 0.000          ; 0.045 ; Low Pulse Width  ; clock                            ; Rise       ; inst8|inst|3|clk                                                                        ;
+; 0.347  ; 0.302        ; 0.000          ; 0.045 ; Low Pulse Width  ; clock                            ; Rise       ; inst8|inst|4|clk                                                                        ;
+; 0.352  ; 0.273        ; 0.000          ; 0.079 ; Low Pulse Width  ; mir8b:inst13|registrador:inst3|3 ; Rise       ; inst13|inst3|3~clkctrl|inclk[0]                                                         ;
+; 0.352  ; 0.273        ; 0.000          ; 0.079 ; Low Pulse Width  ; mir8b:inst13|registrador:inst3|3 ; Rise       ; inst13|inst3|3~clkctrl|outclk                                                           ;
+; 0.356  ; 0.350        ; 0.000          ; 0.006 ; Low Pulse Width  ; clock                            ; Rise       ; clock~inputclkctrl|inclk[0]                                                             ;
+; 0.356  ; 0.350        ; 0.000          ; 0.006 ; Low Pulse Width  ; clock                            ; Rise       ; clock~inputclkctrl|outclk                                                               ;
+; 0.365  ; 0.418        ; 0.216          ; 0.163 ; High Pulse Width ; mir8b:inst13|registrador:inst2|4 ; Rise       ; ic2b:inst9|lpm_counter:lpm_counter_component|cntr_16i:auto_generated|counter_reg_bit[0] ;
+; 0.365  ; 0.418        ; 0.216          ; 0.163 ; High Pulse Width ; mir8b:inst13|registrador:inst2|4 ; Rise       ; ic2b:inst9|lpm_counter:lpm_counter_component|cntr_16i:auto_generated|counter_reg_bit[1] ;
+; 0.390  ; 0.265        ; 0.000          ; 0.125 ; Low Pulse Width  ; mir8b:inst13|registrador:inst2|4 ; Rise       ; inst9|lpm_counter_component|auto_generated|counter_reg_bit[0]|clk                       ;
+; 0.390  ; 0.265        ; 0.000          ; 0.125 ; Low Pulse Width  ; mir8b:inst13|registrador:inst2|4 ; Rise       ; inst9|lpm_counter_component|auto_generated|counter_reg_bit[1]|clk                       ;
+; 0.399  ; 0.312        ; 0.000          ; 0.087 ; Low Pulse Width  ; mir8b:inst13|registrador:inst2|4 ; Rise       ; inst13|inst2|4~clkctrl|inclk[0]                                                         ;
+; 0.399  ; 0.312        ; 0.000          ; 0.087 ; Low Pulse Width  ; mir8b:inst13|registrador:inst2|4 ; Rise       ; inst13|inst2|4~clkctrl|outclk                                                           ;
+; 0.407  ; 0.468        ; 0.216          ; 0.155 ; High Pulse Width ; mir8b:inst13|registrador:inst3|3 ; Rise       ; acc2b:inst1|registrador:inst|3                                                          ;
+; 0.407  ; 0.468        ; 0.216          ; 0.155 ; High Pulse Width ; mir8b:inst13|registrador:inst3|3 ; Rise       ; acc2b:inst1|registrador:inst|4                                                          ;
+; 0.412  ; 0.319        ; 0.000          ; 0.093 ; Low Pulse Width  ; mir8b:inst13|registrador:inst1|3 ; Rise       ; inst4|inst1|3|clk                                                                       ;
+; 0.412  ; 0.319        ; 0.000          ; 0.093 ; Low Pulse Width  ; mir8b:inst13|registrador:inst1|3 ; Rise       ; inst4|inst1|4|clk                                                                       ;
+; 0.412  ; 0.319        ; 0.000          ; 0.093 ; Low Pulse Width  ; mir8b:inst13|registrador:inst1|3 ; Rise       ; inst4|inst2|3|clk                                                                       ;
+; 0.412  ; 0.319        ; 0.000          ; 0.093 ; Low Pulse Width  ; mir8b:inst13|registrador:inst1|3 ; Rise       ; inst4|inst2|4|clk                                                                       ;
+; 0.412  ; 0.319        ; 0.000          ; 0.093 ; Low Pulse Width  ; mir8b:inst13|registrador:inst1|3 ; Rise       ; inst4|inst|4|clk                                                                        ;
+; 0.413  ; 0.546        ; 0.216          ; 0.083 ; High Pulse Width ; clock                            ; Rise       ; mir8b:inst13|registrador:inst1|3                                                        ;
+; 0.413  ; 0.546        ; 0.216          ; 0.083 ; High Pulse Width ; clock                            ; Rise       ; mir8b:inst13|registrador:inst1|4                                                        ;
+; 0.413  ; 0.546        ; 0.216          ; 0.083 ; High Pulse Width ; clock                            ; Rise       ; mir8b:inst13|registrador:inst2|3                                                        ;
+; 0.413  ; 0.546        ; 0.216          ; 0.083 ; High Pulse Width ; clock                            ; Rise       ; mir8b:inst13|registrador:inst2|4                                                        ;
+; 0.413  ; 0.546        ; 0.216          ; 0.083 ; High Pulse Width ; clock                            ; Rise       ; mir8b:inst13|registrador:inst3|3                                                        ;
+; 0.413  ; 0.546        ; 0.216          ; 0.083 ; High Pulse Width ; clock                            ; Rise       ; mir8b:inst13|registrador:inst3|4                                                        ;
+; 0.413  ; 0.546        ; 0.216          ; 0.083 ; High Pulse Width ; clock                            ; Rise       ; mir8b:inst13|registrador:inst|3                                                         ;
+; 0.413  ; 0.546        ; 0.216          ; 0.083 ; High Pulse Width ; clock                            ; Rise       ; mir8b:inst13|registrador:inst|4                                                         ;
++--------+--------------+----------------+-------+------------------+----------------------------------+------------+-----------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Setup Times                                                                                                      ;
++---------------+----------------------------------+-------+-------+------------+----------------------------------+
+; Data Port     ; Clock Port                       ; Rise  ; Fall  ; Clock Edge ; Clock Reference                  ;
++---------------+----------------------------------+-------+-------+------------+----------------------------------+
+; data_bus_[*]  ; mir8b:inst13|registrador:inst1|3 ; 1.712 ; 2.168 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[0] ; mir8b:inst13|registrador:inst1|3 ; 1.712 ; 2.163 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[1] ; mir8b:inst13|registrador:inst1|3 ; 1.523 ; 1.981 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[2] ; mir8b:inst13|registrador:inst1|3 ; 1.525 ; 1.981 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[3] ; mir8b:inst13|registrador:inst1|3 ; 1.569 ; 2.018 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[4] ; mir8b:inst13|registrador:inst1|3 ; 1.704 ; 2.168 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
++---------------+----------------------------------+-------+-------+------------+----------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Hold Times                                                                                                         ;
++---------------+----------------------------------+--------+--------+------------+----------------------------------+
+; Data Port     ; Clock Port                       ; Rise   ; Fall   ; Clock Edge ; Clock Reference                  ;
++---------------+----------------------------------+--------+--------+------------+----------------------------------+
+; data_bus_[*]  ; mir8b:inst13|registrador:inst1|3 ; -1.091 ; -1.526 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[0] ; mir8b:inst13|registrador:inst1|3 ; -1.284 ; -1.721 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[1] ; mir8b:inst13|registrador:inst1|3 ; -1.091 ; -1.526 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[2] ; mir8b:inst13|registrador:inst1|3 ; -1.094 ; -1.527 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[3] ; mir8b:inst13|registrador:inst1|3 ; -1.136 ; -1.563 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[4] ; mir8b:inst13|registrador:inst1|3 ; -1.276 ; -1.726 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
++---------------+----------------------------------+--------+--------+------------+----------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                            ;
++---------------+----------------------------------+-------+-------+------------+----------------------------------+
+; Data Port     ; Clock Port                       ; Rise  ; Fall  ; Clock Edge ; Clock Reference                  ;
++---------------+----------------------------------+-------+-------+------------+----------------------------------+
+; data_bus_[*]  ; mir8b:inst13|registrador:inst1|3 ; 5.192 ; 5.327 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[0] ; mir8b:inst13|registrador:inst1|3 ; 5.192 ; 5.103 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[1] ; mir8b:inst13|registrador:inst1|3 ; 4.770 ; 4.681 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[2] ; mir8b:inst13|registrador:inst1|3 ; 4.810 ; 4.721 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[3] ; mir8b:inst13|registrador:inst1|3 ;       ; 5.327 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[4] ; mir8b:inst13|registrador:inst1|3 ; 5.070 ; 4.981 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+; data_bus_[*]  ; mir8b:inst13|registrador:inst1|3 ; 5.369 ; 5.223 ; Fall       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[0] ; mir8b:inst13|registrador:inst1|3 ; 5.223 ; 5.223 ; Fall       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[1] ; mir8b:inst13|registrador:inst1|3 ; 4.785 ; 4.785 ; Fall       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[2] ; mir8b:inst13|registrador:inst1|3 ; 4.825 ; 4.825 ; Fall       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[3] ; mir8b:inst13|registrador:inst1|3 ; 5.369 ;       ; Fall       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[4] ; mir8b:inst13|registrador:inst1|3 ; 5.074 ; 5.074 ; Fall       ; mir8b:inst13|registrador:inst1|3 ;
+; out_0         ; mir8b:inst13|registrador:inst3|3 ; 8.156 ; 8.303 ; Rise       ; mir8b:inst13|registrador:inst3|3 ;
+; out_1         ; mir8b:inst13|registrador:inst3|3 ; 6.302 ; 6.287 ; Rise       ; mir8b:inst13|registrador:inst3|3 ;
+; data_bus_[*]  ; mir8b:inst13|registrador:inst|4  ; 6.596 ; 6.581 ; Rise       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[0] ; mir8b:inst13|registrador:inst|4  ; 6.596 ; 6.581 ; Rise       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[1] ; mir8b:inst13|registrador:inst|4  ; 6.289 ; 6.310 ; Rise       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[2] ; mir8b:inst13|registrador:inst|4  ; 6.008 ; 5.975 ; Rise       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[3] ; mir8b:inst13|registrador:inst|4  ;       ; 5.327 ; Rise       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[4] ; mir8b:inst13|registrador:inst|4  ; 5.070 ; 4.981 ; Rise       ; mir8b:inst13|registrador:inst|4  ;
+; data_bus_[*]  ; mir8b:inst13|registrador:inst|4  ; 5.366 ; 5.220 ; Fall       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[0] ; mir8b:inst13|registrador:inst|4  ; 5.220 ; 5.220 ; Fall       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[1] ; mir8b:inst13|registrador:inst|4  ; 4.782 ; 4.782 ; Fall       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[2] ; mir8b:inst13|registrador:inst|4  ; 4.822 ; 4.822 ; Fall       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[3] ; mir8b:inst13|registrador:inst|4  ; 5.366 ;       ; Fall       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[4] ; mir8b:inst13|registrador:inst|4  ; 5.071 ; 5.071 ; Fall       ; mir8b:inst13|registrador:inst|4  ;
++---------------+----------------------------------+-------+-------+------------+----------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                                    ;
++---------------+----------------------------------+-------+-------+------------+----------------------------------+
+; Data Port     ; Clock Port                       ; Rise  ; Fall  ; Clock Edge ; Clock Reference                  ;
++---------------+----------------------------------+-------+-------+------------+----------------------------------+
+; data_bus_[*]  ; mir8b:inst13|registrador:inst1|3 ; 4.432 ; 4.420 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[0] ; mir8b:inst13|registrador:inst1|3 ; 4.837 ; 4.825 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[1] ; mir8b:inst13|registrador:inst1|3 ; 4.432 ; 4.420 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[2] ; mir8b:inst13|registrador:inst1|3 ; 4.472 ; 4.460 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[3] ; mir8b:inst13|registrador:inst1|3 ;       ; 5.141 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[4] ; mir8b:inst13|registrador:inst1|3 ; 4.720 ; 4.708 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+; data_bus_[*]  ; mir8b:inst13|registrador:inst1|3 ; 4.451 ; 4.451 ; Fall       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[0] ; mir8b:inst13|registrador:inst1|3 ; 4.870 ; 4.870 ; Fall       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[1] ; mir8b:inst13|registrador:inst1|3 ; 4.451 ; 4.451 ; Fall       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[2] ; mir8b:inst13|registrador:inst1|3 ; 4.491 ; 4.491 ; Fall       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[3] ; mir8b:inst13|registrador:inst1|3 ; 5.197 ;       ; Fall       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[4] ; mir8b:inst13|registrador:inst1|3 ; 4.728 ; 4.728 ; Fall       ; mir8b:inst13|registrador:inst1|3 ;
+; out_0         ; mir8b:inst13|registrador:inst3|3 ; 7.910 ; 8.050 ; Rise       ; mir8b:inst13|registrador:inst3|3 ;
+; out_1         ; mir8b:inst13|registrador:inst3|3 ; 6.125 ; 6.108 ; Rise       ; mir8b:inst13|registrador:inst3|3 ;
+; data_bus_[*]  ; mir8b:inst13|registrador:inst|4  ; 4.437 ; 4.425 ; Rise       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[0] ; mir8b:inst13|registrador:inst|4  ; 4.842 ; 4.830 ; Rise       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[1] ; mir8b:inst13|registrador:inst|4  ; 4.437 ; 4.425 ; Rise       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[2] ; mir8b:inst13|registrador:inst|4  ; 4.477 ; 4.465 ; Rise       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[3] ; mir8b:inst13|registrador:inst|4  ;       ; 5.146 ; Rise       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[4] ; mir8b:inst13|registrador:inst|4  ; 4.725 ; 4.713 ; Rise       ; mir8b:inst13|registrador:inst|4  ;
+; data_bus_[*]  ; mir8b:inst13|registrador:inst|4  ; 4.448 ; 4.448 ; Fall       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[0] ; mir8b:inst13|registrador:inst|4  ; 4.867 ; 4.867 ; Fall       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[1] ; mir8b:inst13|registrador:inst|4  ; 4.448 ; 4.448 ; Fall       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[2] ; mir8b:inst13|registrador:inst|4  ; 4.488 ; 4.488 ; Fall       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[3] ; mir8b:inst13|registrador:inst|4  ; 5.194 ;       ; Fall       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[4] ; mir8b:inst13|registrador:inst|4  ; 4.725 ; 4.725 ; Fall       ; mir8b:inst13|registrador:inst|4  ;
++---------------+----------------------------------+-------+-------+------------+----------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                                                               ;
++------------+-----------------+----------------------------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name                       ; Note                                                          ;
++------------+-----------------+----------------------------------+---------------------------------------------------------------+
+; 358.17 MHz ; 250.0 MHz       ; clock                            ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 775.19 MHz ; 500.0 MHz       ; mir8b:inst13|registrador:inst2|4 ; limit due to minimum period restriction (tmin)                ;
++------------+-----------------+----------------------------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-----------------------------------------------------------+
+; Slow 1200mV 0C Model Setup Summary                        ;
++----------------------------------+--------+---------------+
+; Clock                            ; Slack  ; End Point TNS ;
++----------------------------------+--------+---------------+
+; clock                            ; -0.896 ; -5.924        ;
+; mir8b:inst13|registrador:inst|4  ; -0.482 ; -0.710        ;
+; mir8b:inst13|registrador:inst2|4 ; -0.290 ; -0.290        ;
+; mir8b:inst13|registrador:inst2|3 ; 0.133  ; 0.000         ;
+; mir8b:inst13|registrador:inst1|4 ; 0.348  ; 0.000         ;
+; mir8b:inst13|registrador:inst3|3 ; 0.438  ; 0.000         ;
++----------------------------------+--------+---------------+
+
+
++-----------------------------------------------------------+
+; Slow 1200mV 0C Model Hold Summary                         ;
++----------------------------------+--------+---------------+
+; Clock                            ; Slack  ; End Point TNS ;
++----------------------------------+--------+---------------+
+; mir8b:inst13|registrador:inst3|3 ; -0.126 ; -0.126        ;
+; mir8b:inst13|registrador:inst1|4 ; 0.210  ; 0.000         ;
+; mir8b:inst13|registrador:inst2|4 ; 0.337  ; 0.000         ;
+; mir8b:inst13|registrador:inst2|3 ; 0.424  ; 0.000         ;
+; clock                            ; 0.681  ; 0.000         ;
+; mir8b:inst13|registrador:inst|4  ; 0.750  ; 0.000         ;
++----------------------------------+--------+---------------+
+
+
++----------------------------------------------------------+
+; Slow 1200mV 0C Model Recovery Summary                    ;
++----------------------------------+-------+---------------+
+; Clock                            ; Slack ; End Point TNS ;
++----------------------------------+-------+---------------+
+; mir8b:inst13|registrador:inst1|3 ; 0.083 ; 0.000         ;
++----------------------------------+-------+---------------+
+
+
++----------------------------------------------------------+
+; Slow 1200mV 0C Model Removal Summary                     ;
++----------------------------------+-------+---------------+
+; Clock                            ; Slack ; End Point TNS ;
++----------------------------------+-------+---------------+
+; mir8b:inst13|registrador:inst1|3 ; 0.507 ; 0.000         ;
++----------------------------------+-------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width                                                                                                                                                                    ;
++--------+--------------+----------------+-------+------------------+----------------------------------+------------+-----------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; CCPP  ; Type             ; Clock                            ; Clock Edge ; Target                                                                                  ;
++--------+--------------+----------------+-------+------------------+----------------------------------+------------+-----------------------------------------------------------------------------------------+
+; -3.000 ; 1.000        ; 4.000          ; 0.000 ; Port Rate        ; clock                            ; Rise       ; clock                                                                                   ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; mir8b:inst13|registrador:inst1|4 ; Rise       ; a2b:inst2|registrador:inst|3                                                            ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; mir8b:inst13|registrador:inst1|4 ; Rise       ; a2b:inst2|registrador:inst|4                                                            ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; mir8b:inst13|registrador:inst3|3 ; Rise       ; acc2b:inst1|registrador:inst|3                                                          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; mir8b:inst13|registrador:inst3|3 ; Rise       ; acc2b:inst1|registrador:inst|4                                                          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; mir8b:inst13|registrador:inst2|3 ; Rise       ; b2b:inst3|registrador:inst|3                                                            ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; mir8b:inst13|registrador:inst2|3 ; Rise       ; b2b:inst3|registrador:inst|4                                                            ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; mir8b:inst13|registrador:inst2|4 ; Rise       ; ic2b:inst9|lpm_counter:lpm_counter_component|cntr_16i:auto_generated|counter_reg_bit[0] ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; mir8b:inst13|registrador:inst2|4 ; Rise       ; ic2b:inst9|lpm_counter:lpm_counter_component|cntr_16i:auto_generated|counter_reg_bit[1] ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; clock                            ; Fall       ; ir2b:inst8|registrador:inst|3                                                           ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; clock                            ; Fall       ; ir2b:inst8|registrador:inst|4                                                           ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; mir8b:inst13|registrador:inst|4  ; Rise       ; mar2b:inst7|registrador:inst|3                                                          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; mir8b:inst13|registrador:inst|4  ; Rise       ; mar2b:inst7|registrador:inst|4                                                          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; mir8b:inst13|registrador:inst1|3 ; Rise       ; mdr6b:inst4|registrador:inst1|3                                                         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; mir8b:inst13|registrador:inst1|3 ; Rise       ; mdr6b:inst4|registrador:inst1|4                                                         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; mir8b:inst13|registrador:inst1|3 ; Rise       ; mdr6b:inst4|registrador:inst2|3                                                         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; mir8b:inst13|registrador:inst1|3 ; Rise       ; mdr6b:inst4|registrador:inst2|4                                                         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; mir8b:inst13|registrador:inst1|3 ; Rise       ; mdr6b:inst4|registrador:inst|4                                                          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; clock                            ; Rise       ; mir8b:inst13|registrador:inst1|3                                                        ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; clock                            ; Rise       ; mir8b:inst13|registrador:inst1|4                                                        ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; clock                            ; Rise       ; mir8b:inst13|registrador:inst2|3                                                        ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; clock                            ; Rise       ; mir8b:inst13|registrador:inst2|4                                                        ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; clock                            ; Rise       ; mir8b:inst13|registrador:inst3|3                                                        ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; clock                            ; Rise       ; mir8b:inst13|registrador:inst3|4                                                        ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; clock                            ; Rise       ; mir8b:inst13|registrador:inst|3                                                         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; clock                            ; Rise       ; mir8b:inst13|registrador:inst|4                                                         ;
+; 0.139  ; 0.282        ; 0.216          ; 0.073 ; High Pulse Width ; clock                            ; Fall       ; ir2b:inst8|registrador:inst|3                                                           ;
+; 0.139  ; 0.282        ; 0.216          ; 0.073 ; High Pulse Width ; clock                            ; Fall       ; ir2b:inst8|registrador:inst|4                                                           ;
+; 0.181  ; 0.292        ; 0.184          ; 0.073 ; Low Pulse Width  ; clock                            ; Rise       ; mir8b:inst13|registrador:inst1|3                                                        ;
+; 0.181  ; 0.292        ; 0.184          ; 0.073 ; Low Pulse Width  ; clock                            ; Rise       ; mir8b:inst13|registrador:inst1|4                                                        ;
+; 0.181  ; 0.292        ; 0.184          ; 0.073 ; Low Pulse Width  ; clock                            ; Rise       ; mir8b:inst13|registrador:inst2|3                                                        ;
+; 0.181  ; 0.292        ; 0.184          ; 0.073 ; Low Pulse Width  ; clock                            ; Rise       ; mir8b:inst13|registrador:inst2|4                                                        ;
+; 0.181  ; 0.292        ; 0.184          ; 0.073 ; Low Pulse Width  ; clock                            ; Rise       ; mir8b:inst13|registrador:inst3|3                                                        ;
+; 0.181  ; 0.292        ; 0.184          ; 0.073 ; Low Pulse Width  ; clock                            ; Rise       ; mir8b:inst13|registrador:inst3|4                                                        ;
+; 0.181  ; 0.292        ; 0.184          ; 0.073 ; Low Pulse Width  ; clock                            ; Rise       ; mir8b:inst13|registrador:inst|3                                                         ;
+; 0.181  ; 0.292        ; 0.184          ; 0.073 ; Low Pulse Width  ; clock                            ; Rise       ; mir8b:inst13|registrador:inst|4                                                         ;
+; 0.256  ; 0.344        ; 0.216          ; 0.128 ; High Pulse Width ; mir8b:inst13|registrador:inst|4  ; Rise       ; mar2b:inst7|registrador:inst|3                                                          ;
+; 0.256  ; 0.344        ; 0.216          ; 0.128 ; High Pulse Width ; mir8b:inst13|registrador:inst|4  ; Rise       ; mar2b:inst7|registrador:inst|4                                                          ;
+; 0.270  ; 0.339        ; 0.216          ; 0.147 ; High Pulse Width ; mir8b:inst13|registrador:inst2|4 ; Rise       ; ic2b:inst9|lpm_counter:lpm_counter_component|cntr_16i:auto_generated|counter_reg_bit[0] ;
+; 0.270  ; 0.339        ; 0.216          ; 0.147 ; High Pulse Width ; mir8b:inst13|registrador:inst2|4 ; Rise       ; ic2b:inst9|lpm_counter:lpm_counter_component|cntr_16i:auto_generated|counter_reg_bit[1] ;
+; 0.271  ; 0.314        ; 0.184          ; 0.141 ; Low Pulse Width  ; mir8b:inst13|registrador:inst3|3 ; Rise       ; acc2b:inst1|registrador:inst|3                                                          ;
+; 0.271  ; 0.314        ; 0.184          ; 0.141 ; Low Pulse Width  ; mir8b:inst13|registrador:inst3|3 ; Rise       ; acc2b:inst1|registrador:inst|4                                                          ;
+; 0.277  ; 0.372        ; 0.216          ; 0.121 ; High Pulse Width ; mir8b:inst13|registrador:inst1|4 ; Rise       ; a2b:inst2|registrador:inst|3                                                            ;
+; 0.277  ; 0.372        ; 0.216          ; 0.121 ; High Pulse Width ; mir8b:inst13|registrador:inst1|4 ; Rise       ; a2b:inst2|registrador:inst|4                                                            ;
+; 0.285  ; 0.350        ; 0.184          ; 0.119 ; Low Pulse Width  ; mir8b:inst13|registrador:inst1|3 ; Rise       ; mdr6b:inst4|registrador:inst1|3                                                         ;
+; 0.285  ; 0.350        ; 0.184          ; 0.119 ; Low Pulse Width  ; mir8b:inst13|registrador:inst1|3 ; Rise       ; mdr6b:inst4|registrador:inst1|4                                                         ;
+; 0.285  ; 0.350        ; 0.184          ; 0.119 ; Low Pulse Width  ; mir8b:inst13|registrador:inst1|3 ; Rise       ; mdr6b:inst4|registrador:inst2|3                                                         ;
+; 0.285  ; 0.350        ; 0.184          ; 0.119 ; Low Pulse Width  ; mir8b:inst13|registrador:inst1|3 ; Rise       ; mdr6b:inst4|registrador:inst2|4                                                         ;
+; 0.285  ; 0.350        ; 0.184          ; 0.119 ; Low Pulse Width  ; mir8b:inst13|registrador:inst1|3 ; Rise       ; mdr6b:inst4|registrador:inst|4                                                          ;
+; 0.289  ; 0.355        ; 0.184          ; 0.118 ; Low Pulse Width  ; mir8b:inst13|registrador:inst2|3 ; Rise       ; b2b:inst3|registrador:inst|3                                                            ;
+; 0.289  ; 0.355        ; 0.184          ; 0.118 ; Low Pulse Width  ; mir8b:inst13|registrador:inst2|3 ; Rise       ; b2b:inst3|registrador:inst|4                                                            ;
+; 0.309  ; 0.407        ; 0.216          ; 0.118 ; High Pulse Width ; mir8b:inst13|registrador:inst2|3 ; Rise       ; b2b:inst3|registrador:inst|3                                                            ;
+; 0.309  ; 0.407        ; 0.216          ; 0.118 ; High Pulse Width ; mir8b:inst13|registrador:inst2|3 ; Rise       ; b2b:inst3|registrador:inst|4                                                            ;
+; 0.313  ; 0.410        ; 0.216          ; 0.119 ; High Pulse Width ; mir8b:inst13|registrador:inst1|3 ; Rise       ; mdr6b:inst4|registrador:inst1|3                                                         ;
+; 0.313  ; 0.410        ; 0.216          ; 0.119 ; High Pulse Width ; mir8b:inst13|registrador:inst1|3 ; Rise       ; mdr6b:inst4|registrador:inst1|4                                                         ;
+; 0.313  ; 0.410        ; 0.216          ; 0.119 ; High Pulse Width ; mir8b:inst13|registrador:inst1|3 ; Rise       ; mdr6b:inst4|registrador:inst2|3                                                         ;
+; 0.313  ; 0.410        ; 0.216          ; 0.119 ; High Pulse Width ; mir8b:inst13|registrador:inst1|3 ; Rise       ; mdr6b:inst4|registrador:inst2|4                                                         ;
+; 0.313  ; 0.410        ; 0.216          ; 0.119 ; High Pulse Width ; mir8b:inst13|registrador:inst1|3 ; Rise       ; mdr6b:inst4|registrador:inst|4                                                          ;
+; 0.322  ; 0.385        ; 0.184          ; 0.121 ; Low Pulse Width  ; mir8b:inst13|registrador:inst1|4 ; Rise       ; a2b:inst2|registrador:inst|3                                                            ;
+; 0.322  ; 0.385        ; 0.184          ; 0.121 ; Low Pulse Width  ; mir8b:inst13|registrador:inst1|4 ; Rise       ; a2b:inst2|registrador:inst|4                                                            ;
+; 0.327  ; 0.402        ; 0.216          ; 0.141 ; High Pulse Width ; mir8b:inst13|registrador:inst3|3 ; Rise       ; acc2b:inst1|registrador:inst|3                                                          ;
+; 0.327  ; 0.402        ; 0.216          ; 0.141 ; High Pulse Width ; mir8b:inst13|registrador:inst3|3 ; Rise       ; acc2b:inst1|registrador:inst|4                                                          ;
+; 0.328  ; 0.365        ; 0.184          ; 0.147 ; Low Pulse Width  ; mir8b:inst13|registrador:inst2|4 ; Rise       ; ic2b:inst9|lpm_counter:lpm_counter_component|cntr_16i:auto_generated|counter_reg_bit[0] ;
+; 0.328  ; 0.365        ; 0.184          ; 0.147 ; Low Pulse Width  ; mir8b:inst13|registrador:inst2|4 ; Rise       ; ic2b:inst9|lpm_counter:lpm_counter_component|cntr_16i:auto_generated|counter_reg_bit[1] ;
+; 0.339  ; 0.339        ; 0.000          ; 0.000 ; Low Pulse Width  ; clock                            ; Rise       ; clock~input|o                                                                           ;
+; 0.341  ; 0.302        ; 0.000          ; 0.039 ; Low Pulse Width  ; clock                            ; Rise       ; inst13|inst1|3|clk                                                                      ;
+; 0.341  ; 0.302        ; 0.000          ; 0.039 ; Low Pulse Width  ; clock                            ; Rise       ; inst13|inst1|4|clk                                                                      ;
+; 0.341  ; 0.302        ; 0.000          ; 0.039 ; Low Pulse Width  ; clock                            ; Rise       ; inst13|inst2|3|clk                                                                      ;
+; 0.341  ; 0.302        ; 0.000          ; 0.039 ; Low Pulse Width  ; clock                            ; Rise       ; inst13|inst2|4|clk                                                                      ;
+; 0.341  ; 0.302        ; 0.000          ; 0.039 ; Low Pulse Width  ; clock                            ; Rise       ; inst13|inst3|3|clk                                                                      ;
+; 0.341  ; 0.302        ; 0.000          ; 0.039 ; Low Pulse Width  ; clock                            ; Rise       ; inst13|inst3|4|clk                                                                      ;
+; 0.341  ; 0.302        ; 0.000          ; 0.039 ; Low Pulse Width  ; clock                            ; Rise       ; inst13|inst|3|clk                                                                       ;
+; 0.341  ; 0.302        ; 0.000          ; 0.039 ; Low Pulse Width  ; clock                            ; Rise       ; inst13|inst|4|clk                                                                       ;
+; 0.341  ; 0.302        ; 0.000          ; 0.039 ; Low Pulse Width  ; clock                            ; Rise       ; inst8|inst|3|clk                                                                        ;
+; 0.341  ; 0.302        ; 0.000          ; 0.039 ; Low Pulse Width  ; clock                            ; Rise       ; inst8|inst|4|clk                                                                        ;
+; 0.344  ; 0.400        ; 0.184          ; 0.128 ; Low Pulse Width  ; mir8b:inst13|registrador:inst|4  ; Rise       ; mar2b:inst7|registrador:inst|3                                                          ;
+; 0.344  ; 0.400        ; 0.184          ; 0.128 ; Low Pulse Width  ; mir8b:inst13|registrador:inst|4  ; Rise       ; mar2b:inst7|registrador:inst|4                                                          ;
+; 0.348  ; 0.343        ; 0.000          ; 0.005 ; Low Pulse Width  ; clock                            ; Rise       ; clock~inputclkctrl|inclk[0]                                                             ;
+; 0.348  ; 0.343        ; 0.000          ; 0.005 ; Low Pulse Width  ; clock                            ; Rise       ; clock~inputclkctrl|outclk                                                               ;
+; 0.419  ; 0.562        ; 0.216          ; 0.073 ; High Pulse Width ; clock                            ; Rise       ; mir8b:inst13|registrador:inst1|3                                                        ;
+; 0.419  ; 0.562        ; 0.216          ; 0.073 ; High Pulse Width ; clock                            ; Rise       ; mir8b:inst13|registrador:inst1|4                                                        ;
+; 0.419  ; 0.562        ; 0.216          ; 0.073 ; High Pulse Width ; clock                            ; Rise       ; mir8b:inst13|registrador:inst2|3                                                        ;
+; 0.419  ; 0.562        ; 0.216          ; 0.073 ; High Pulse Width ; clock                            ; Rise       ; mir8b:inst13|registrador:inst2|4                                                        ;
+; 0.419  ; 0.562        ; 0.216          ; 0.073 ; High Pulse Width ; clock                            ; Rise       ; mir8b:inst13|registrador:inst3|3                                                        ;
+; 0.419  ; 0.562        ; 0.216          ; 0.073 ; High Pulse Width ; clock                            ; Rise       ; mir8b:inst13|registrador:inst3|4                                                        ;
+; 0.419  ; 0.562        ; 0.216          ; 0.073 ; High Pulse Width ; clock                            ; Rise       ; mir8b:inst13|registrador:inst|3                                                         ;
+; 0.419  ; 0.562        ; 0.216          ; 0.073 ; High Pulse Width ; clock                            ; Rise       ; mir8b:inst13|registrador:inst|4                                                         ;
+; 0.431  ; 0.324        ; 0.000          ; 0.107 ; Low Pulse Width  ; mir8b:inst13|registrador:inst3|3 ; Rise       ; inst1|inst|3|clk                                                                        ;
+; 0.431  ; 0.324        ; 0.000          ; 0.107 ; Low Pulse Width  ; mir8b:inst13|registrador:inst3|3 ; Rise       ; inst1|inst|4|clk                                                                        ;
+; 0.435  ; 0.361        ; 0.000          ; 0.074 ; Low Pulse Width  ; mir8b:inst13|registrador:inst3|3 ; Rise       ; inst13|inst3|3~clkctrl|inclk[0]                                                         ;
+; 0.435  ; 0.361        ; 0.000          ; 0.074 ; Low Pulse Width  ; mir8b:inst13|registrador:inst3|3 ; Rise       ; inst13|inst3|3~clkctrl|outclk                                                           ;
+; 0.445  ; 0.360        ; 0.000          ; 0.085 ; Low Pulse Width  ; mir8b:inst13|registrador:inst1|3 ; Rise       ; inst4|inst1|3|clk                                                                       ;
+; 0.445  ; 0.360        ; 0.000          ; 0.085 ; Low Pulse Width  ; mir8b:inst13|registrador:inst1|3 ; Rise       ; inst4|inst1|4|clk                                                                       ;
+; 0.445  ; 0.360        ; 0.000          ; 0.085 ; Low Pulse Width  ; mir8b:inst13|registrador:inst1|3 ; Rise       ; inst4|inst2|3|clk                                                                       ;
+; 0.445  ; 0.360        ; 0.000          ; 0.085 ; Low Pulse Width  ; mir8b:inst13|registrador:inst1|3 ; Rise       ; inst4|inst2|4|clk                                                                       ;
+; 0.445  ; 0.360        ; 0.000          ; 0.085 ; Low Pulse Width  ; mir8b:inst13|registrador:inst1|3 ; Rise       ; inst4|inst|4|clk                                                                        ;
+; 0.449  ; 0.365        ; 0.000          ; 0.084 ; Low Pulse Width  ; mir8b:inst13|registrador:inst2|3 ; Rise       ; inst3|inst|3|clk                                                                        ;
+; 0.449  ; 0.365        ; 0.000          ; 0.084 ; Low Pulse Width  ; mir8b:inst13|registrador:inst2|3 ; Rise       ; inst3|inst|4|clk                                                                        ;
+; 0.451  ; 0.399        ; 0.000          ; 0.052 ; Low Pulse Width  ; mir8b:inst13|registrador:inst1|3 ; Rise       ; inst13|inst1|3~clkctrl|inclk[0]                                                         ;
+; 0.451  ; 0.399        ; 0.000          ; 0.052 ; Low Pulse Width  ; mir8b:inst13|registrador:inst1|3 ; Rise       ; inst13|inst1|3~clkctrl|outclk                                                           ;
++--------+--------------+----------------+-------+------------------+----------------------------------+------------+-----------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Setup Times                                                                                                      ;
++---------------+----------------------------------+-------+-------+------------+----------------------------------+
+; Data Port     ; Clock Port                       ; Rise  ; Fall  ; Clock Edge ; Clock Reference                  ;
++---------------+----------------------------------+-------+-------+------------+----------------------------------+
+; data_bus_[*]  ; mir8b:inst13|registrador:inst1|3 ; 1.516 ; 1.880 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[0] ; mir8b:inst13|registrador:inst1|3 ; 1.516 ; 1.876 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[1] ; mir8b:inst13|registrador:inst1|3 ; 1.348 ; 1.706 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[2] ; mir8b:inst13|registrador:inst1|3 ; 1.358 ; 1.705 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[3] ; mir8b:inst13|registrador:inst1|3 ; 1.392 ; 1.743 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[4] ; mir8b:inst13|registrador:inst1|3 ; 1.506 ; 1.880 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
++---------------+----------------------------------+-------+-------+------------+----------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Hold Times                                                                                                         ;
++---------------+----------------------------------+--------+--------+------------+----------------------------------+
+; Data Port     ; Clock Port                       ; Rise   ; Fall   ; Clock Edge ; Clock Reference                  ;
++---------------+----------------------------------+--------+--------+------------+----------------------------------+
+; data_bus_[*]  ; mir8b:inst13|registrador:inst1|3 ; -0.962 ; -1.305 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[0] ; mir8b:inst13|registrador:inst1|3 ; -1.134 ; -1.484 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[1] ; mir8b:inst13|registrador:inst1|3 ; -0.962 ; -1.305 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[2] ; mir8b:inst13|registrador:inst1|3 ; -0.973 ; -1.305 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[3] ; mir8b:inst13|registrador:inst1|3 ; -1.006 ; -1.342 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[4] ; mir8b:inst13|registrador:inst1|3 ; -1.124 ; -1.488 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
++---------------+----------------------------------+--------+--------+------------+----------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                            ;
++---------------+----------------------------------+-------+-------+------------+----------------------------------+
+; Data Port     ; Clock Port                       ; Rise  ; Fall  ; Clock Edge ; Clock Reference                  ;
++---------------+----------------------------------+-------+-------+------------+----------------------------------+
+; data_bus_[*]  ; mir8b:inst13|registrador:inst1|3 ; 4.820 ; 5.017 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[0] ; mir8b:inst13|registrador:inst1|3 ; 4.820 ; 4.820 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[1] ; mir8b:inst13|registrador:inst1|3 ; 4.450 ; 4.450 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[2] ; mir8b:inst13|registrador:inst1|3 ; 4.490 ; 4.490 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[3] ; mir8b:inst13|registrador:inst1|3 ;       ; 5.017 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[4] ; mir8b:inst13|registrador:inst1|3 ; 4.713 ; 4.713 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+; data_bus_[*]  ; mir8b:inst13|registrador:inst1|3 ; 5.121 ; 4.913 ; Fall       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[0] ; mir8b:inst13|registrador:inst1|3 ; 4.911 ; 4.913 ; Fall       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[1] ; mir8b:inst13|registrador:inst1|3 ; 4.501 ; 4.503 ; Fall       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[2] ; mir8b:inst13|registrador:inst1|3 ; 4.541 ; 4.543 ; Fall       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[3] ; mir8b:inst13|registrador:inst1|3 ; 5.121 ;       ; Fall       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[4] ; mir8b:inst13|registrador:inst1|3 ; 4.765 ; 4.767 ; Fall       ; mir8b:inst13|registrador:inst1|3 ;
+; out_0         ; mir8b:inst13|registrador:inst3|3 ; 7.682 ; 7.711 ; Rise       ; mir8b:inst13|registrador:inst3|3 ;
+; out_1         ; mir8b:inst13|registrador:inst3|3 ; 5.931 ; 5.901 ; Rise       ; mir8b:inst13|registrador:inst3|3 ;
+; data_bus_[*]  ; mir8b:inst13|registrador:inst|4  ; 6.190 ; 6.156 ; Rise       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[0] ; mir8b:inst13|registrador:inst|4  ; 6.190 ; 6.156 ; Rise       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[1] ; mir8b:inst13|registrador:inst|4  ; 5.898 ; 5.930 ; Rise       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[2] ; mir8b:inst13|registrador:inst|4  ; 5.651 ; 5.636 ; Rise       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[3] ; mir8b:inst13|registrador:inst|4  ;       ; 5.016 ; Rise       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[4] ; mir8b:inst13|registrador:inst|4  ; 4.712 ; 4.712 ; Rise       ; mir8b:inst13|registrador:inst|4  ;
+; data_bus_[*]  ; mir8b:inst13|registrador:inst|4  ; 5.119 ; 4.911 ; Fall       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[0] ; mir8b:inst13|registrador:inst|4  ; 4.909 ; 4.911 ; Fall       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[1] ; mir8b:inst13|registrador:inst|4  ; 4.499 ; 4.501 ; Fall       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[2] ; mir8b:inst13|registrador:inst|4  ; 4.539 ; 4.541 ; Fall       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[3] ; mir8b:inst13|registrador:inst|4  ; 5.119 ;       ; Fall       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[4] ; mir8b:inst13|registrador:inst|4  ; 4.763 ; 4.765 ; Fall       ; mir8b:inst13|registrador:inst|4  ;
++---------------+----------------------------------+-------+-------+------------+----------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                                    ;
++---------------+----------------------------------+-------+-------+------------+----------------------------------+
+; Data Port     ; Clock Port                       ; Rise  ; Fall  ; Clock Edge ; Clock Reference                  ;
++---------------+----------------------------------+-------+-------+------------+----------------------------------+
+; data_bus_[*]  ; mir8b:inst13|registrador:inst1|3 ; 4.003 ; 3.912 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[0] ; mir8b:inst13|registrador:inst1|3 ; 4.358 ; 4.267 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[1] ; mir8b:inst13|registrador:inst1|3 ; 4.003 ; 3.912 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[2] ; mir8b:inst13|registrador:inst1|3 ; 4.043 ; 3.952 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[3] ; mir8b:inst13|registrador:inst1|3 ;       ; 4.851 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[4] ; mir8b:inst13|registrador:inst1|3 ; 4.255 ; 4.164 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+; data_bus_[*]  ; mir8b:inst13|registrador:inst1|3 ; 3.977 ; 3.977 ; Fall       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[0] ; mir8b:inst13|registrador:inst1|3 ; 4.370 ; 4.370 ; Fall       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[1] ; mir8b:inst13|registrador:inst1|3 ; 3.977 ; 3.977 ; Fall       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[2] ; mir8b:inst13|registrador:inst1|3 ; 4.017 ; 4.017 ; Fall       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[3] ; mir8b:inst13|registrador:inst1|3 ; 4.965 ;       ; Fall       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[4] ; mir8b:inst13|registrador:inst1|3 ; 4.230 ; 4.230 ; Fall       ; mir8b:inst13|registrador:inst1|3 ;
+; out_0         ; mir8b:inst13|registrador:inst3|3 ; 7.455 ; 7.483 ; Rise       ; mir8b:inst13|registrador:inst3|3 ;
+; out_1         ; mir8b:inst13|registrador:inst3|3 ; 5.769 ; 5.738 ; Rise       ; mir8b:inst13|registrador:inst3|3 ;
+; data_bus_[*]  ; mir8b:inst13|registrador:inst|4  ; 4.007 ; 3.916 ; Rise       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[0] ; mir8b:inst13|registrador:inst|4  ; 4.362 ; 4.271 ; Rise       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[1] ; mir8b:inst13|registrador:inst|4  ; 4.007 ; 3.916 ; Rise       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[2] ; mir8b:inst13|registrador:inst|4  ; 4.047 ; 3.956 ; Rise       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[3] ; mir8b:inst13|registrador:inst|4  ;       ; 4.855 ; Rise       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[4] ; mir8b:inst13|registrador:inst|4  ; 4.259 ; 4.168 ; Rise       ; mir8b:inst13|registrador:inst|4  ;
+; data_bus_[*]  ; mir8b:inst13|registrador:inst|4  ; 3.975 ; 3.975 ; Fall       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[0] ; mir8b:inst13|registrador:inst|4  ; 4.368 ; 4.368 ; Fall       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[1] ; mir8b:inst13|registrador:inst|4  ; 3.975 ; 3.975 ; Fall       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[2] ; mir8b:inst13|registrador:inst|4  ; 4.015 ; 4.015 ; Fall       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[3] ; mir8b:inst13|registrador:inst|4  ; 4.963 ;       ; Fall       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[4] ; mir8b:inst13|registrador:inst|4  ; 4.228 ; 4.228 ; Fall       ; mir8b:inst13|registrador:inst|4  ;
++---------------+----------------------------------+-------+-------+------------+----------------------------------+
+
+
++-----------------------------------------------------------+
+; Fast 1200mV 0C Model Setup Summary                        ;
++----------------------------------+--------+---------------+
+; Clock                            ; Slack  ; End Point TNS ;
++----------------------------------+--------+---------------+
+; clock                            ; -0.636 ; -4.060        ;
+; mir8b:inst13|registrador:inst|4  ; 0.111  ; 0.000         ;
+; mir8b:inst13|registrador:inst2|4 ; 0.212  ; 0.000         ;
+; mir8b:inst13|registrador:inst2|3 ; 0.459  ; 0.000         ;
+; mir8b:inst13|registrador:inst1|4 ; 0.587  ; 0.000         ;
+; mir8b:inst13|registrador:inst3|3 ; 0.628  ; 0.000         ;
++----------------------------------+--------+---------------+
+
+
++-----------------------------------------------------------+
+; Fast 1200mV 0C Model Hold Summary                         ;
++----------------------------------+--------+---------------+
+; Clock                            ; Slack  ; End Point TNS ;
++----------------------------------+--------+---------------+
+; mir8b:inst13|registrador:inst3|3 ; -0.079 ; -0.088        ;
+; mir8b:inst13|registrador:inst1|4 ; 0.121  ; 0.000         ;
+; mir8b:inst13|registrador:inst2|4 ; 0.196  ; 0.000         ;
+; mir8b:inst13|registrador:inst2|3 ; 0.223  ; 0.000         ;
+; clock                            ; 0.304  ; 0.000         ;
+; mir8b:inst13|registrador:inst|4  ; 0.431  ; 0.000         ;
++----------------------------------+--------+---------------+
+
+
++----------------------------------------------------------+
+; Fast 1200mV 0C Model Recovery Summary                    ;
++----------------------------------+-------+---------------+
+; Clock                            ; Slack ; End Point TNS ;
++----------------------------------+-------+---------------+
+; mir8b:inst13|registrador:inst1|3 ; 0.441 ; 0.000         ;
++----------------------------------+-------+---------------+
+
+
++----------------------------------------------------------+
+; Fast 1200mV 0C Model Removal Summary                     ;
++----------------------------------+-------+---------------+
+; Clock                            ; Slack ; End Point TNS ;
++----------------------------------+-------+---------------+
+; mir8b:inst13|registrador:inst1|3 ; 0.279 ; 0.000         ;
++----------------------------------+-------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width                                                                                                                                                                    ;
++--------+--------------+----------------+-------+------------------+----------------------------------+------------+-----------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; CCPP  ; Type             ; Clock                            ; Clock Edge ; Target                                                                                  ;
++--------+--------------+----------------+-------+------------------+----------------------------------+------------+-----------------------------------------------------------------------------------------+
+; -3.000 ; 1.000        ; 4.000          ; 0.000 ; Port Rate        ; clock                            ; Rise       ; clock                                                                                   ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; mir8b:inst13|registrador:inst1|4 ; Rise       ; a2b:inst2|registrador:inst|3                                                            ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; mir8b:inst13|registrador:inst1|4 ; Rise       ; a2b:inst2|registrador:inst|4                                                            ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; mir8b:inst13|registrador:inst3|3 ; Rise       ; acc2b:inst1|registrador:inst|3                                                          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; mir8b:inst13|registrador:inst3|3 ; Rise       ; acc2b:inst1|registrador:inst|4                                                          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; mir8b:inst13|registrador:inst2|3 ; Rise       ; b2b:inst3|registrador:inst|3                                                            ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; mir8b:inst13|registrador:inst2|3 ; Rise       ; b2b:inst3|registrador:inst|4                                                            ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; mir8b:inst13|registrador:inst2|4 ; Rise       ; ic2b:inst9|lpm_counter:lpm_counter_component|cntr_16i:auto_generated|counter_reg_bit[0] ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; mir8b:inst13|registrador:inst2|4 ; Rise       ; ic2b:inst9|lpm_counter:lpm_counter_component|cntr_16i:auto_generated|counter_reg_bit[1] ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; clock                            ; Fall       ; ir2b:inst8|registrador:inst|3                                                           ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; clock                            ; Fall       ; ir2b:inst8|registrador:inst|4                                                           ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; mir8b:inst13|registrador:inst|4  ; Rise       ; mar2b:inst7|registrador:inst|3                                                          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; mir8b:inst13|registrador:inst|4  ; Rise       ; mar2b:inst7|registrador:inst|4                                                          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; mir8b:inst13|registrador:inst1|3 ; Rise       ; mdr6b:inst4|registrador:inst1|3                                                         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; mir8b:inst13|registrador:inst1|3 ; Rise       ; mdr6b:inst4|registrador:inst1|4                                                         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; mir8b:inst13|registrador:inst1|3 ; Rise       ; mdr6b:inst4|registrador:inst2|3                                                         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; mir8b:inst13|registrador:inst1|3 ; Rise       ; mdr6b:inst4|registrador:inst2|4                                                         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; mir8b:inst13|registrador:inst1|3 ; Rise       ; mdr6b:inst4|registrador:inst|4                                                          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; clock                            ; Rise       ; mir8b:inst13|registrador:inst1|3                                                        ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; clock                            ; Rise       ; mir8b:inst13|registrador:inst1|4                                                        ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; clock                            ; Rise       ; mir8b:inst13|registrador:inst2|3                                                        ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; clock                            ; Rise       ; mir8b:inst13|registrador:inst2|4                                                        ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; clock                            ; Rise       ; mir8b:inst13|registrador:inst3|3                                                        ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; clock                            ; Rise       ; mir8b:inst13|registrador:inst3|4                                                        ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; clock                            ; Rise       ; mir8b:inst13|registrador:inst|3                                                         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period       ; clock                            ; Rise       ; mir8b:inst13|registrador:inst|4                                                         ;
+; -0.099 ; 0.067        ; 0.216          ; 0.050 ; High Pulse Width ; clock                            ; Fall       ; ir2b:inst8|registrador:inst|3                                                           ;
+; -0.099 ; 0.067        ; 0.216          ; 0.050 ; High Pulse Width ; clock                            ; Fall       ; ir2b:inst8|registrador:inst|4                                                           ;
+; -0.056 ; 0.079        ; 0.184          ; 0.049 ; Low Pulse Width  ; clock                            ; Rise       ; mir8b:inst13|registrador:inst1|3                                                        ;
+; -0.056 ; 0.079        ; 0.184          ; 0.049 ; Low Pulse Width  ; clock                            ; Rise       ; mir8b:inst13|registrador:inst1|4                                                        ;
+; -0.056 ; 0.079        ; 0.184          ; 0.049 ; Low Pulse Width  ; clock                            ; Rise       ; mir8b:inst13|registrador:inst2|3                                                        ;
+; -0.056 ; 0.079        ; 0.184          ; 0.049 ; Low Pulse Width  ; clock                            ; Rise       ; mir8b:inst13|registrador:inst2|4                                                        ;
+; -0.056 ; 0.079        ; 0.184          ; 0.049 ; Low Pulse Width  ; clock                            ; Rise       ; mir8b:inst13|registrador:inst3|3                                                        ;
+; -0.056 ; 0.079        ; 0.184          ; 0.049 ; Low Pulse Width  ; clock                            ; Rise       ; mir8b:inst13|registrador:inst3|4                                                        ;
+; -0.056 ; 0.079        ; 0.184          ; 0.049 ; Low Pulse Width  ; clock                            ; Rise       ; mir8b:inst13|registrador:inst|3                                                         ;
+; -0.056 ; 0.079        ; 0.184          ; 0.049 ; Low Pulse Width  ; clock                            ; Rise       ; mir8b:inst13|registrador:inst|4                                                         ;
+; 0.118  ; 0.118        ; 0.000          ; 0.000 ; Low Pulse Width  ; clock                            ; Rise       ; clock~input|o                                                                           ;
+; 0.123  ; 0.097        ; 0.000          ; 0.026 ; Low Pulse Width  ; clock                            ; Rise       ; inst13|inst1|3|clk                                                                      ;
+; 0.123  ; 0.097        ; 0.000          ; 0.026 ; Low Pulse Width  ; clock                            ; Rise       ; inst13|inst1|4|clk                                                                      ;
+; 0.123  ; 0.097        ; 0.000          ; 0.026 ; Low Pulse Width  ; clock                            ; Rise       ; inst13|inst2|3|clk                                                                      ;
+; 0.123  ; 0.097        ; 0.000          ; 0.026 ; Low Pulse Width  ; clock                            ; Rise       ; inst13|inst2|4|clk                                                                      ;
+; 0.123  ; 0.097        ; 0.000          ; 0.026 ; Low Pulse Width  ; clock                            ; Rise       ; inst13|inst3|3|clk                                                                      ;
+; 0.123  ; 0.097        ; 0.000          ; 0.026 ; Low Pulse Width  ; clock                            ; Rise       ; inst13|inst3|4|clk                                                                      ;
+; 0.123  ; 0.097        ; 0.000          ; 0.026 ; Low Pulse Width  ; clock                            ; Rise       ; inst13|inst|3|clk                                                                       ;
+; 0.123  ; 0.097        ; 0.000          ; 0.026 ; Low Pulse Width  ; clock                            ; Rise       ; inst13|inst|4|clk                                                                       ;
+; 0.123  ; 0.097        ; 0.000          ; 0.026 ; Low Pulse Width  ; clock                            ; Rise       ; inst8|inst|3|clk                                                                        ;
+; 0.123  ; 0.097        ; 0.000          ; 0.026 ; Low Pulse Width  ; clock                            ; Rise       ; inst8|inst|4|clk                                                                        ;
+; 0.132  ; 0.129        ; 0.000          ; 0.003 ; Low Pulse Width  ; clock                            ; Rise       ; clock~inputclkctrl|inclk[0]                                                             ;
+; 0.132  ; 0.129        ; 0.000          ; 0.003 ; Low Pulse Width  ; clock                            ; Rise       ; clock~inputclkctrl|outclk                                                               ;
+; 0.151  ; 0.240        ; 0.184          ; 0.095 ; Low Pulse Width  ; mir8b:inst13|registrador:inst2|4 ; Rise       ; ic2b:inst9|lpm_counter:lpm_counter_component|cntr_16i:auto_generated|counter_reg_bit[0] ;
+; 0.151  ; 0.240        ; 0.184          ; 0.095 ; Low Pulse Width  ; mir8b:inst13|registrador:inst2|4 ; Rise       ; ic2b:inst9|lpm_counter:lpm_counter_component|cntr_16i:auto_generated|counter_reg_bit[1] ;
+; 0.153  ; 0.247        ; 0.184          ; 0.090 ; Low Pulse Width  ; mir8b:inst13|registrador:inst3|3 ; Rise       ; acc2b:inst1|registrador:inst|3                                                          ;
+; 0.153  ; 0.247        ; 0.184          ; 0.090 ; Low Pulse Width  ; mir8b:inst13|registrador:inst3|3 ; Rise       ; acc2b:inst1|registrador:inst|4                                                          ;
+; 0.198  ; 0.305        ; 0.184          ; 0.077 ; Low Pulse Width  ; mir8b:inst13|registrador:inst1|3 ; Rise       ; mdr6b:inst4|registrador:inst1|3                                                         ;
+; 0.198  ; 0.305        ; 0.184          ; 0.077 ; Low Pulse Width  ; mir8b:inst13|registrador:inst1|3 ; Rise       ; mdr6b:inst4|registrador:inst1|4                                                         ;
+; 0.198  ; 0.305        ; 0.184          ; 0.077 ; Low Pulse Width  ; mir8b:inst13|registrador:inst1|3 ; Rise       ; mdr6b:inst4|registrador:inst2|3                                                         ;
+; 0.198  ; 0.305        ; 0.184          ; 0.077 ; Low Pulse Width  ; mir8b:inst13|registrador:inst1|3 ; Rise       ; mdr6b:inst4|registrador:inst2|4                                                         ;
+; 0.198  ; 0.305        ; 0.184          ; 0.077 ; Low Pulse Width  ; mir8b:inst13|registrador:inst1|3 ; Rise       ; mdr6b:inst4|registrador:inst|4                                                          ;
+; 0.205  ; 0.313        ; 0.184          ; 0.076 ; Low Pulse Width  ; mir8b:inst13|registrador:inst2|3 ; Rise       ; b2b:inst3|registrador:inst|3                                                            ;
+; 0.205  ; 0.313        ; 0.184          ; 0.076 ; Low Pulse Width  ; mir8b:inst13|registrador:inst2|3 ; Rise       ; b2b:inst3|registrador:inst|4                                                            ;
+; 0.221  ; 0.327        ; 0.184          ; 0.078 ; Low Pulse Width  ; mir8b:inst13|registrador:inst1|4 ; Rise       ; a2b:inst2|registrador:inst|3                                                            ;
+; 0.221  ; 0.327        ; 0.184          ; 0.078 ; Low Pulse Width  ; mir8b:inst13|registrador:inst1|4 ; Rise       ; a2b:inst2|registrador:inst|4                                                            ;
+; 0.221  ; 0.323        ; 0.184          ; 0.082 ; Low Pulse Width  ; mir8b:inst13|registrador:inst|4  ; Rise       ; mar2b:inst7|registrador:inst|3                                                          ;
+; 0.221  ; 0.323        ; 0.184          ; 0.082 ; Low Pulse Width  ; mir8b:inst13|registrador:inst|4  ; Rise       ; mar2b:inst7|registrador:inst|4                                                          ;
+; 0.331  ; 0.258        ; 0.000          ; 0.073 ; Low Pulse Width  ; mir8b:inst13|registrador:inst2|4 ; Rise       ; inst9|lpm_counter_component|auto_generated|counter_reg_bit[0]|clk                       ;
+; 0.331  ; 0.258        ; 0.000          ; 0.073 ; Low Pulse Width  ; mir8b:inst13|registrador:inst2|4 ; Rise       ; inst9|lpm_counter_component|auto_generated|counter_reg_bit[1]|clk                       ;
+; 0.333  ; 0.265        ; 0.000          ; 0.068 ; Low Pulse Width  ; mir8b:inst13|registrador:inst3|3 ; Rise       ; inst1|inst|3|clk                                                                        ;
+; 0.333  ; 0.265        ; 0.000          ; 0.068 ; Low Pulse Width  ; mir8b:inst13|registrador:inst3|3 ; Rise       ; inst1|inst|4|clk                                                                        ;
+; 0.341  ; 0.292        ; 0.000          ; 0.049 ; Low Pulse Width  ; mir8b:inst13|registrador:inst2|4 ; Rise       ; inst13|inst2|4~clkctrl|inclk[0]                                                         ;
+; 0.341  ; 0.292        ; 0.000          ; 0.049 ; Low Pulse Width  ; mir8b:inst13|registrador:inst2|4 ; Rise       ; inst13|inst2|4~clkctrl|outclk                                                           ;
+; 0.342  ; 0.297        ; 0.000          ; 0.045 ; Low Pulse Width  ; mir8b:inst13|registrador:inst3|3 ; Rise       ; inst13|inst3|3~clkctrl|inclk[0]                                                         ;
+; 0.342  ; 0.297        ; 0.000          ; 0.045 ; Low Pulse Width  ; mir8b:inst13|registrador:inst3|3 ; Rise       ; inst13|inst3|3~clkctrl|outclk                                                           ;
+; 0.373  ; 0.511        ; 0.216          ; 0.078 ; High Pulse Width ; mir8b:inst13|registrador:inst1|4 ; Rise       ; a2b:inst2|registrador:inst|3                                                            ;
+; 0.373  ; 0.511        ; 0.216          ; 0.078 ; High Pulse Width ; mir8b:inst13|registrador:inst1|4 ; Rise       ; a2b:inst2|registrador:inst|4                                                            ;
+; 0.373  ; 0.507        ; 0.216          ; 0.082 ; High Pulse Width ; mir8b:inst13|registrador:inst|4  ; Rise       ; mar2b:inst7|registrador:inst|3                                                          ;
+; 0.373  ; 0.507        ; 0.216          ; 0.082 ; High Pulse Width ; mir8b:inst13|registrador:inst|4  ; Rise       ; mar2b:inst7|registrador:inst|4                                                          ;
+; 0.378  ; 0.323        ; 0.000          ; 0.055 ; Low Pulse Width  ; mir8b:inst13|registrador:inst1|3 ; Rise       ; inst4|inst1|3|clk                                                                       ;
+; 0.378  ; 0.323        ; 0.000          ; 0.055 ; Low Pulse Width  ; mir8b:inst13|registrador:inst1|3 ; Rise       ; inst4|inst1|4|clk                                                                       ;
+; 0.378  ; 0.323        ; 0.000          ; 0.055 ; Low Pulse Width  ; mir8b:inst13|registrador:inst1|3 ; Rise       ; inst4|inst2|3|clk                                                                       ;
+; 0.378  ; 0.323        ; 0.000          ; 0.055 ; Low Pulse Width  ; mir8b:inst13|registrador:inst1|3 ; Rise       ; inst4|inst2|4|clk                                                                       ;
+; 0.378  ; 0.323        ; 0.000          ; 0.055 ; Low Pulse Width  ; mir8b:inst13|registrador:inst1|3 ; Rise       ; inst4|inst|4|clk                                                                        ;
+; 0.385  ; 0.331        ; 0.000          ; 0.054 ; Low Pulse Width  ; mir8b:inst13|registrador:inst2|3 ; Rise       ; inst3|inst|3|clk                                                                        ;
+; 0.385  ; 0.331        ; 0.000          ; 0.054 ; Low Pulse Width  ; mir8b:inst13|registrador:inst2|3 ; Rise       ; inst3|inst|4|clk                                                                        ;
+; 0.387  ; 0.527        ; 0.216          ; 0.076 ; High Pulse Width ; mir8b:inst13|registrador:inst2|3 ; Rise       ; b2b:inst3|registrador:inst|3                                                            ;
+; 0.387  ; 0.527        ; 0.216          ; 0.076 ; High Pulse Width ; mir8b:inst13|registrador:inst2|3 ; Rise       ; b2b:inst3|registrador:inst|4                                                            ;
+; 0.387  ; 0.355        ; 0.000          ; 0.032 ; Low Pulse Width  ; mir8b:inst13|registrador:inst1|3 ; Rise       ; inst13|inst1|3~clkctrl|inclk[0]                                                         ;
+; 0.387  ; 0.355        ; 0.000          ; 0.032 ; Low Pulse Width  ; mir8b:inst13|registrador:inst1|3 ; Rise       ; inst13|inst1|3~clkctrl|outclk                                                           ;
+; 0.394  ; 0.363        ; 0.000          ; 0.031 ; Low Pulse Width  ; mir8b:inst13|registrador:inst2|3 ; Rise       ; inst13|inst2|3~clkctrl|inclk[0]                                                         ;
+; 0.394  ; 0.363        ; 0.000          ; 0.031 ; Low Pulse Width  ; mir8b:inst13|registrador:inst2|3 ; Rise       ; inst13|inst2|3~clkctrl|outclk                                                           ;
+; 0.396  ; 0.535        ; 0.216          ; 0.077 ; High Pulse Width ; mir8b:inst13|registrador:inst1|3 ; Rise       ; mdr6b:inst4|registrador:inst1|3                                                         ;
+; 0.396  ; 0.535        ; 0.216          ; 0.077 ; High Pulse Width ; mir8b:inst13|registrador:inst1|3 ; Rise       ; mdr6b:inst4|registrador:inst1|4                                                         ;
+; 0.396  ; 0.535        ; 0.216          ; 0.077 ; High Pulse Width ; mir8b:inst13|registrador:inst1|3 ; Rise       ; mdr6b:inst4|registrador:inst2|3                                                         ;
+; 0.396  ; 0.535        ; 0.216          ; 0.077 ; High Pulse Width ; mir8b:inst13|registrador:inst1|3 ; Rise       ; mdr6b:inst4|registrador:inst2|4                                                         ;
+; 0.396  ; 0.535        ; 0.216          ; 0.077 ; High Pulse Width ; mir8b:inst13|registrador:inst1|3 ; Rise       ; mdr6b:inst4|registrador:inst|4                                                          ;
+; 0.401  ; 0.345        ; 0.000          ; 0.056 ; Low Pulse Width  ; mir8b:inst13|registrador:inst1|4 ; Rise       ; inst2|inst|3|clk                                                                        ;
+; 0.401  ; 0.345        ; 0.000          ; 0.056 ; Low Pulse Width  ; mir8b:inst13|registrador:inst1|4 ; Rise       ; inst2|inst|4|clk                                                                        ;
+; 0.401  ; 0.341        ; 0.000          ; 0.060 ; Low Pulse Width  ; mir8b:inst13|registrador:inst|4  ; Rise       ; inst7|inst|3|clk                                                                        ;
+; 0.401  ; 0.341        ; 0.000          ; 0.060 ; Low Pulse Width  ; mir8b:inst13|registrador:inst|4  ; Rise       ; inst7|inst|4|clk                                                                        ;
+; 0.409  ; 0.372        ; 0.000          ; 0.037 ; Low Pulse Width  ; mir8b:inst13|registrador:inst|4  ; Rise       ; inst13|inst|4~clkctrl|inclk[0]                                                          ;
+; 0.409  ; 0.372        ; 0.000          ; 0.037 ; Low Pulse Width  ; mir8b:inst13|registrador:inst|4  ; Rise       ; inst13|inst|4~clkctrl|outclk                                                            ;
++--------+--------------+----------------+-------+------------------+----------------------------------+------------+-----------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Setup Times                                                                                                      ;
++---------------+----------------------------------+-------+-------+------------+----------------------------------+
+; Data Port     ; Clock Port                       ; Rise  ; Fall  ; Clock Edge ; Clock Reference                  ;
++---------------+----------------------------------+-------+-------+------------+----------------------------------+
+; data_bus_[*]  ; mir8b:inst13|registrador:inst1|3 ; 0.956 ; 1.573 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[0] ; mir8b:inst13|registrador:inst1|3 ; 0.943 ; 1.573 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[1] ; mir8b:inst13|registrador:inst1|3 ; 0.846 ; 1.485 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[2] ; mir8b:inst13|registrador:inst1|3 ; 0.861 ; 1.491 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[3] ; mir8b:inst13|registrador:inst1|3 ; 0.900 ; 1.528 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[4] ; mir8b:inst13|registrador:inst1|3 ; 0.956 ; 1.572 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
++---------------+----------------------------------+-------+-------+------------+----------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Hold Times                                                                                                         ;
++---------------+----------------------------------+--------+--------+------------+----------------------------------+
+; Data Port     ; Clock Port                       ; Rise   ; Fall   ; Clock Edge ; Clock Reference                  ;
++---------------+----------------------------------+--------+--------+------------+----------------------------------+
+; data_bus_[*]  ; mir8b:inst13|registrador:inst1|3 ; -0.601 ; -1.224 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[0] ; mir8b:inst13|registrador:inst1|3 ; -0.698 ; -1.320 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[1] ; mir8b:inst13|registrador:inst1|3 ; -0.601 ; -1.224 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[2] ; mir8b:inst13|registrador:inst1|3 ; -0.616 ; -1.232 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[3] ; mir8b:inst13|registrador:inst1|3 ; -0.653 ; -1.267 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[4] ; mir8b:inst13|registrador:inst1|3 ; -0.710 ; -1.319 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
++---------------+----------------------------------+--------+--------+------------+----------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                            ;
++---------------+----------------------------------+-------+-------+------------+----------------------------------+
+; Data Port     ; Clock Port                       ; Rise  ; Fall  ; Clock Edge ; Clock Reference                  ;
++---------------+----------------------------------+-------+-------+------------+----------------------------------+
+; data_bus_[*]  ; mir8b:inst13|registrador:inst1|3 ; 3.937 ; 3.937 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[0] ; mir8b:inst13|registrador:inst1|3 ; 3.937 ; 3.937 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[1] ; mir8b:inst13|registrador:inst1|3 ; 3.680 ; 3.680 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[2] ; mir8b:inst13|registrador:inst1|3 ; 3.720 ; 3.720 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[3] ; mir8b:inst13|registrador:inst1|3 ;       ; 3.311 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[4] ; mir8b:inst13|registrador:inst1|3 ; 3.871 ; 3.871 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+; data_bus_[*]  ; mir8b:inst13|registrador:inst1|3 ; 3.832 ; 3.828 ; Fall       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[0] ; mir8b:inst13|registrador:inst1|3 ; 3.832 ; 3.828 ; Fall       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[1] ; mir8b:inst13|registrador:inst1|3 ; 3.600 ; 3.596 ; Fall       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[2] ; mir8b:inst13|registrador:inst1|3 ; 3.640 ; 3.636 ; Fall       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[3] ; mir8b:inst13|registrador:inst1|3 ; 3.223 ;       ; Fall       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[4] ; mir8b:inst13|registrador:inst1|3 ; 3.773 ; 3.769 ; Fall       ; mir8b:inst13|registrador:inst1|3 ;
+; out_0         ; mir8b:inst13|registrador:inst3|3 ; 4.851 ; 5.038 ; Rise       ; mir8b:inst13|registrador:inst3|3 ;
+; out_1         ; mir8b:inst13|registrador:inst3|3 ; 3.730 ; 3.775 ; Rise       ; mir8b:inst13|registrador:inst3|3 ;
+; data_bus_[*]  ; mir8b:inst13|registrador:inst|4  ; 3.952 ; 3.974 ; Rise       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[0] ; mir8b:inst13|registrador:inst|4  ; 3.952 ; 3.974 ; Rise       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[1] ; mir8b:inst13|registrador:inst|4  ; 3.792 ; 3.794 ; Rise       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[2] ; mir8b:inst13|registrador:inst|4  ; 3.722 ; 3.722 ; Rise       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[3] ; mir8b:inst13|registrador:inst|4  ;       ; 3.313 ; Rise       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[4] ; mir8b:inst13|registrador:inst|4  ; 3.873 ; 3.873 ; Rise       ; mir8b:inst13|registrador:inst|4  ;
+; data_bus_[*]  ; mir8b:inst13|registrador:inst|4  ; 3.829 ; 3.825 ; Fall       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[0] ; mir8b:inst13|registrador:inst|4  ; 3.829 ; 3.825 ; Fall       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[1] ; mir8b:inst13|registrador:inst|4  ; 3.597 ; 3.593 ; Fall       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[2] ; mir8b:inst13|registrador:inst|4  ; 3.637 ; 3.633 ; Fall       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[3] ; mir8b:inst13|registrador:inst|4  ; 3.220 ;       ; Fall       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[4] ; mir8b:inst13|registrador:inst|4  ; 3.770 ; 3.766 ; Fall       ; mir8b:inst13|registrador:inst|4  ;
++---------------+----------------------------------+-------+-------+------------+----------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                                    ;
++---------------+----------------------------------+-------+-------+------------+----------------------------------+
+; Data Port     ; Clock Port                       ; Rise  ; Fall  ; Clock Edge ; Clock Reference                  ;
++---------------+----------------------------------+-------+-------+------------+----------------------------------+
+; data_bus_[*]  ; mir8b:inst13|registrador:inst1|3 ; 2.802 ; 2.744 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[0] ; mir8b:inst13|registrador:inst1|3 ; 3.048 ; 2.990 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[1] ; mir8b:inst13|registrador:inst1|3 ; 2.802 ; 2.744 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[2] ; mir8b:inst13|registrador:inst1|3 ; 2.842 ; 2.784 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[3] ; mir8b:inst13|registrador:inst1|3 ;       ; 3.207 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[4] ; mir8b:inst13|registrador:inst1|3 ; 2.985 ; 2.927 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+; data_bus_[*]  ; mir8b:inst13|registrador:inst1|3 ; 2.671 ; 2.671 ; Fall       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[0] ; mir8b:inst13|registrador:inst1|3 ; 2.894 ; 2.894 ; Fall       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[1] ; mir8b:inst13|registrador:inst1|3 ; 2.671 ; 2.671 ; Fall       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[2] ; mir8b:inst13|registrador:inst1|3 ; 2.711 ; 2.711 ; Fall       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[3] ; mir8b:inst13|registrador:inst1|3 ; 3.127 ;       ; Fall       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[4] ; mir8b:inst13|registrador:inst1|3 ; 2.837 ; 2.837 ; Fall       ; mir8b:inst13|registrador:inst1|3 ;
+; out_0         ; mir8b:inst13|registrador:inst3|3 ; 4.709 ; 4.888 ; Rise       ; mir8b:inst13|registrador:inst3|3 ;
+; out_1         ; mir8b:inst13|registrador:inst3|3 ; 3.629 ; 3.671 ; Rise       ; mir8b:inst13|registrador:inst3|3 ;
+; data_bus_[*]  ; mir8b:inst13|registrador:inst|4  ; 2.806 ; 2.748 ; Rise       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[0] ; mir8b:inst13|registrador:inst|4  ; 3.052 ; 2.994 ; Rise       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[1] ; mir8b:inst13|registrador:inst|4  ; 2.806 ; 2.748 ; Rise       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[2] ; mir8b:inst13|registrador:inst|4  ; 2.846 ; 2.788 ; Rise       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[3] ; mir8b:inst13|registrador:inst|4  ;       ; 3.211 ; Rise       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[4] ; mir8b:inst13|registrador:inst|4  ; 2.989 ; 2.931 ; Rise       ; mir8b:inst13|registrador:inst|4  ;
+; data_bus_[*]  ; mir8b:inst13|registrador:inst|4  ; 2.668 ; 2.668 ; Fall       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[0] ; mir8b:inst13|registrador:inst|4  ; 2.891 ; 2.891 ; Fall       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[1] ; mir8b:inst13|registrador:inst|4  ; 2.668 ; 2.668 ; Fall       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[2] ; mir8b:inst13|registrador:inst|4  ; 2.708 ; 2.708 ; Fall       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[3] ; mir8b:inst13|registrador:inst|4  ; 3.124 ;       ; Fall       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[4] ; mir8b:inst13|registrador:inst|4  ; 2.834 ; 2.834 ; Fall       ; mir8b:inst13|registrador:inst|4  ;
++---------------+----------------------------------+-------+-------+------------+----------------------------------+
+
+
++------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                            ;
++-----------------------------------+--------+--------+----------+---------+---------------------+
+; Clock                             ; Setup  ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++-----------------------------------+--------+--------+----------+---------+---------------------+
+; Worst-case Slack                  ; -1.043 ; -0.126 ; 0.0      ; 0.0     ; -3.000              ;
+;  clock                            ; -1.043 ; 0.304  ; N/A      ; N/A     ; N/A                 ;
+;  mir8b:inst13|registrador:inst1|3 ; N/A    ; N/A    ; 0.020    ; 0.279   ; N/A                 ;
+;  mir8b:inst13|registrador:inst1|4 ; 0.266  ; 0.121  ; N/A      ; N/A     ; N/A                 ;
+;  mir8b:inst13|registrador:inst2|3 ; 0.014  ; 0.223  ; N/A      ; N/A     ; N/A                 ;
+;  mir8b:inst13|registrador:inst2|4 ; -0.449 ; 0.196  ; N/A      ; N/A     ; N/A                 ;
+;  mir8b:inst13|registrador:inst3|3 ; 0.325  ; -0.126 ; N/A      ; N/A     ; N/A                 ;
+;  mir8b:inst13|registrador:inst|4  ; -0.635 ; 0.431  ; N/A      ; N/A     ; N/A                 ;
+; Design-wide TNS                   ; -8.654 ; -0.126 ; 0.0      ; 0.0     ; N/A                 ;
+;  clock                            ; -7.163 ; 0.000  ; N/A      ; N/A     ; N/A                 ;
+;  mir8b:inst13|registrador:inst1|3 ; N/A    ; N/A    ; 0.000    ; 0.000   ; N/A                 ;
+;  mir8b:inst13|registrador:inst1|4 ; 0.000  ; 0.000  ; N/A      ; N/A     ; N/A                 ;
+;  mir8b:inst13|registrador:inst2|3 ; 0.000  ; 0.000  ; N/A      ; N/A     ; N/A                 ;
+;  mir8b:inst13|registrador:inst2|4 ; -0.501 ; 0.000  ; N/A      ; N/A     ; N/A                 ;
+;  mir8b:inst13|registrador:inst3|3 ; 0.000  ; -0.126 ; N/A      ; N/A     ; N/A                 ;
+;  mir8b:inst13|registrador:inst|4  ; -0.990 ; 0.000  ; N/A      ; N/A     ; N/A                 ;
++-----------------------------------+--------+--------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Setup Times                                                                                                      ;
++---------------+----------------------------------+-------+-------+------------+----------------------------------+
+; Data Port     ; Clock Port                       ; Rise  ; Fall  ; Clock Edge ; Clock Reference                  ;
++---------------+----------------------------------+-------+-------+------------+----------------------------------+
+; data_bus_[*]  ; mir8b:inst13|registrador:inst1|3 ; 1.712 ; 2.168 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[0] ; mir8b:inst13|registrador:inst1|3 ; 1.712 ; 2.163 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[1] ; mir8b:inst13|registrador:inst1|3 ; 1.523 ; 1.981 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[2] ; mir8b:inst13|registrador:inst1|3 ; 1.525 ; 1.981 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[3] ; mir8b:inst13|registrador:inst1|3 ; 1.569 ; 2.018 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[4] ; mir8b:inst13|registrador:inst1|3 ; 1.704 ; 2.168 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
++---------------+----------------------------------+-------+-------+------------+----------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Hold Times                                                                                                         ;
++---------------+----------------------------------+--------+--------+------------+----------------------------------+
+; Data Port     ; Clock Port                       ; Rise   ; Fall   ; Clock Edge ; Clock Reference                  ;
++---------------+----------------------------------+--------+--------+------------+----------------------------------+
+; data_bus_[*]  ; mir8b:inst13|registrador:inst1|3 ; -0.601 ; -1.224 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[0] ; mir8b:inst13|registrador:inst1|3 ; -0.698 ; -1.320 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[1] ; mir8b:inst13|registrador:inst1|3 ; -0.601 ; -1.224 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[2] ; mir8b:inst13|registrador:inst1|3 ; -0.616 ; -1.232 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[3] ; mir8b:inst13|registrador:inst1|3 ; -0.653 ; -1.267 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[4] ; mir8b:inst13|registrador:inst1|3 ; -0.710 ; -1.319 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
++---------------+----------------------------------+--------+--------+------------+----------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                            ;
++---------------+----------------------------------+-------+-------+------------+----------------------------------+
+; Data Port     ; Clock Port                       ; Rise  ; Fall  ; Clock Edge ; Clock Reference                  ;
++---------------+----------------------------------+-------+-------+------------+----------------------------------+
+; data_bus_[*]  ; mir8b:inst13|registrador:inst1|3 ; 5.192 ; 5.327 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[0] ; mir8b:inst13|registrador:inst1|3 ; 5.192 ; 5.103 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[1] ; mir8b:inst13|registrador:inst1|3 ; 4.770 ; 4.681 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[2] ; mir8b:inst13|registrador:inst1|3 ; 4.810 ; 4.721 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[3] ; mir8b:inst13|registrador:inst1|3 ;       ; 5.327 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[4] ; mir8b:inst13|registrador:inst1|3 ; 5.070 ; 4.981 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+; data_bus_[*]  ; mir8b:inst13|registrador:inst1|3 ; 5.369 ; 5.223 ; Fall       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[0] ; mir8b:inst13|registrador:inst1|3 ; 5.223 ; 5.223 ; Fall       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[1] ; mir8b:inst13|registrador:inst1|3 ; 4.785 ; 4.785 ; Fall       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[2] ; mir8b:inst13|registrador:inst1|3 ; 4.825 ; 4.825 ; Fall       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[3] ; mir8b:inst13|registrador:inst1|3 ; 5.369 ;       ; Fall       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[4] ; mir8b:inst13|registrador:inst1|3 ; 5.074 ; 5.074 ; Fall       ; mir8b:inst13|registrador:inst1|3 ;
+; out_0         ; mir8b:inst13|registrador:inst3|3 ; 8.156 ; 8.303 ; Rise       ; mir8b:inst13|registrador:inst3|3 ;
+; out_1         ; mir8b:inst13|registrador:inst3|3 ; 6.302 ; 6.287 ; Rise       ; mir8b:inst13|registrador:inst3|3 ;
+; data_bus_[*]  ; mir8b:inst13|registrador:inst|4  ; 6.596 ; 6.581 ; Rise       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[0] ; mir8b:inst13|registrador:inst|4  ; 6.596 ; 6.581 ; Rise       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[1] ; mir8b:inst13|registrador:inst|4  ; 6.289 ; 6.310 ; Rise       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[2] ; mir8b:inst13|registrador:inst|4  ; 6.008 ; 5.975 ; Rise       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[3] ; mir8b:inst13|registrador:inst|4  ;       ; 5.327 ; Rise       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[4] ; mir8b:inst13|registrador:inst|4  ; 5.070 ; 4.981 ; Rise       ; mir8b:inst13|registrador:inst|4  ;
+; data_bus_[*]  ; mir8b:inst13|registrador:inst|4  ; 5.366 ; 5.220 ; Fall       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[0] ; mir8b:inst13|registrador:inst|4  ; 5.220 ; 5.220 ; Fall       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[1] ; mir8b:inst13|registrador:inst|4  ; 4.782 ; 4.782 ; Fall       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[2] ; mir8b:inst13|registrador:inst|4  ; 4.822 ; 4.822 ; Fall       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[3] ; mir8b:inst13|registrador:inst|4  ; 5.366 ;       ; Fall       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[4] ; mir8b:inst13|registrador:inst|4  ; 5.071 ; 5.071 ; Fall       ; mir8b:inst13|registrador:inst|4  ;
++---------------+----------------------------------+-------+-------+------------+----------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                                    ;
++---------------+----------------------------------+-------+-------+------------+----------------------------------+
+; Data Port     ; Clock Port                       ; Rise  ; Fall  ; Clock Edge ; Clock Reference                  ;
++---------------+----------------------------------+-------+-------+------------+----------------------------------+
+; data_bus_[*]  ; mir8b:inst13|registrador:inst1|3 ; 2.802 ; 2.744 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[0] ; mir8b:inst13|registrador:inst1|3 ; 3.048 ; 2.990 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[1] ; mir8b:inst13|registrador:inst1|3 ; 2.802 ; 2.744 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[2] ; mir8b:inst13|registrador:inst1|3 ; 2.842 ; 2.784 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[3] ; mir8b:inst13|registrador:inst1|3 ;       ; 3.207 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[4] ; mir8b:inst13|registrador:inst1|3 ; 2.985 ; 2.927 ; Rise       ; mir8b:inst13|registrador:inst1|3 ;
+; data_bus_[*]  ; mir8b:inst13|registrador:inst1|3 ; 2.671 ; 2.671 ; Fall       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[0] ; mir8b:inst13|registrador:inst1|3 ; 2.894 ; 2.894 ; Fall       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[1] ; mir8b:inst13|registrador:inst1|3 ; 2.671 ; 2.671 ; Fall       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[2] ; mir8b:inst13|registrador:inst1|3 ; 2.711 ; 2.711 ; Fall       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[3] ; mir8b:inst13|registrador:inst1|3 ; 3.127 ;       ; Fall       ; mir8b:inst13|registrador:inst1|3 ;
+;  data_bus_[4] ; mir8b:inst13|registrador:inst1|3 ; 2.837 ; 2.837 ; Fall       ; mir8b:inst13|registrador:inst1|3 ;
+; out_0         ; mir8b:inst13|registrador:inst3|3 ; 4.709 ; 4.888 ; Rise       ; mir8b:inst13|registrador:inst3|3 ;
+; out_1         ; mir8b:inst13|registrador:inst3|3 ; 3.629 ; 3.671 ; Rise       ; mir8b:inst13|registrador:inst3|3 ;
+; data_bus_[*]  ; mir8b:inst13|registrador:inst|4  ; 2.806 ; 2.748 ; Rise       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[0] ; mir8b:inst13|registrador:inst|4  ; 3.052 ; 2.994 ; Rise       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[1] ; mir8b:inst13|registrador:inst|4  ; 2.806 ; 2.748 ; Rise       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[2] ; mir8b:inst13|registrador:inst|4  ; 2.846 ; 2.788 ; Rise       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[3] ; mir8b:inst13|registrador:inst|4  ;       ; 3.211 ; Rise       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[4] ; mir8b:inst13|registrador:inst|4  ; 2.989 ; 2.931 ; Rise       ; mir8b:inst13|registrador:inst|4  ;
+; data_bus_[*]  ; mir8b:inst13|registrador:inst|4  ; 2.668 ; 2.668 ; Fall       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[0] ; mir8b:inst13|registrador:inst|4  ; 2.891 ; 2.891 ; Fall       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[1] ; mir8b:inst13|registrador:inst|4  ; 2.668 ; 2.668 ; Fall       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[2] ; mir8b:inst13|registrador:inst|4  ; 2.708 ; 2.708 ; Fall       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[3] ; mir8b:inst13|registrador:inst|4  ; 3.124 ;       ; Fall       ; mir8b:inst13|registrador:inst|4  ;
+;  data_bus_[4] ; mir8b:inst13|registrador:inst|4  ; 2.834 ; 2.834 ; Fall       ; mir8b:inst13|registrador:inst|4  ;
++---------------+----------------------------------+-------+-------+------------+----------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+
+; out_1         ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; out_0         ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; data_bus_[4]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; data_bus_[3]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; data_bus_[2]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; data_bus_[1]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; data_bus_[0]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; data_bus_[4]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; data_bus_[3]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; data_bus_[2]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; data_bus_[1]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; data_bus_[0]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; reset                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; clock                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Corner Signal Integrity Metrics                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; out_1         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-006 V                  ; 2.36 V              ; -0.0108 V           ; 0.122 V                              ; 0.021 V                              ; 4.5e-010 s                  ; 4.45e-010 s                 ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-006 V                 ; 2.36 V             ; -0.0108 V          ; 0.122 V                             ; 0.021 V                             ; 4.5e-010 s                 ; 4.45e-010 s                ; Yes                       ; Yes                       ;
+; out_0         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.26e-007 V                  ; 2.35 V              ; -0.011 V            ; 0.113 V                              ; 0.035 V                              ; 7.76e-010 s                 ; 8.05e-010 s                 ; Yes                        ; Yes                        ; 2.32 V                      ; 7.26e-007 V                 ; 2.35 V             ; -0.011 V           ; 0.113 V                             ; 0.035 V                             ; 7.76e-010 s                ; 8.05e-010 s                ; Yes                       ; Yes                       ;
+; data_bus_[4]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.26e-007 V                  ; 2.35 V              ; -0.011 V            ; 0.113 V                              ; 0.035 V                              ; 7.76e-010 s                 ; 8.05e-010 s                 ; Yes                        ; Yes                        ; 2.32 V                      ; 7.26e-007 V                 ; 2.35 V             ; -0.011 V           ; 0.113 V                             ; 0.035 V                             ; 7.76e-010 s                ; 8.05e-010 s                ; Yes                       ; Yes                       ;
+; data_bus_[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.26e-007 V                  ; 2.35 V              ; -0.011 V            ; 0.113 V                              ; 0.035 V                              ; 7.76e-010 s                 ; 8.05e-010 s                 ; Yes                        ; Yes                        ; 2.32 V                      ; 7.26e-007 V                 ; 2.35 V             ; -0.011 V           ; 0.113 V                             ; 0.035 V                             ; 7.76e-010 s                ; 8.05e-010 s                ; Yes                       ; Yes                       ;
+; data_bus_[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.26e-007 V                  ; 2.35 V              ; -0.011 V            ; 0.113 V                              ; 0.035 V                              ; 7.76e-010 s                 ; 8.05e-010 s                 ; Yes                        ; Yes                        ; 2.32 V                      ; 7.26e-007 V                 ; 2.35 V             ; -0.011 V           ; 0.113 V                             ; 0.035 V                             ; 7.76e-010 s                ; 8.05e-010 s                ; Yes                       ; Yes                       ;
+; data_bus_[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.26e-007 V                  ; 2.35 V              ; -0.011 V            ; 0.113 V                              ; 0.035 V                              ; 7.76e-010 s                 ; 8.05e-010 s                 ; Yes                        ; Yes                        ; 2.32 V                      ; 7.26e-007 V                 ; 2.35 V             ; -0.011 V           ; 0.113 V                             ; 0.035 V                             ; 7.76e-010 s                ; 8.05e-010 s                ; Yes                       ; Yes                       ;
+; data_bus_[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.26e-007 V                  ; 2.35 V              ; -0.011 V            ; 0.113 V                              ; 0.035 V                              ; 7.76e-010 s                 ; 8.05e-010 s                 ; Yes                        ; Yes                        ; 2.32 V                      ; 7.26e-007 V                 ; 2.35 V             ; -0.011 V           ; 0.113 V                             ; 0.035 V                             ; 7.76e-010 s                ; 8.05e-010 s                ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.68e-007 V                  ; 2.35 V              ; -0.0132 V           ; 0.2 V                                ; 0.027 V                              ; 5.26e-010 s                 ; 4.81e-010 s                 ; Yes                        ; Yes                        ; 2.32 V                      ; 5.68e-007 V                 ; 2.35 V             ; -0.0132 V          ; 0.2 V                               ; 0.027 V                             ; 5.26e-010 s                ; 4.81e-010 s                ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.36e-007 V                  ; 2.35 V              ; -0.00483 V          ; 0.18 V                               ; 0.019 V                              ; 7.23e-010 s                 ; 9.82e-010 s                 ; Yes                        ; Yes                        ; 2.32 V                      ; 9.36e-007 V                 ; 2.35 V             ; -0.00483 V         ; 0.18 V                              ; 0.019 V                             ; 7.23e-010 s                ; 9.82e-010 s                ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Corner Signal Integrity Metrics                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; out_1         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-008 V                  ; 2.73 V              ; -0.0567 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-010 s                 ; 2.76e-010 s                 ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-008 V                 ; 2.73 V             ; -0.0567 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-010 s                ; 2.76e-010 s                ; Yes                       ; Yes                       ;
+; out_0         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-008 V                  ; 2.71 V              ; -0.0352 V           ; 0.253 V                              ; 0.068 V                              ; 4.96e-010 s                 ; 5.19e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-008 V                 ; 2.71 V             ; -0.0352 V          ; 0.253 V                             ; 0.068 V                             ; 4.96e-010 s                ; 5.19e-010 s                ; No                        ; Yes                       ;
+; data_bus_[4]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-008 V                  ; 2.71 V              ; -0.0352 V           ; 0.253 V                              ; 0.068 V                              ; 4.96e-010 s                 ; 5.19e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-008 V                 ; 2.71 V             ; -0.0352 V          ; 0.253 V                             ; 0.068 V                             ; 4.96e-010 s                ; 5.19e-010 s                ; No                        ; Yes                       ;
+; data_bus_[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-008 V                  ; 2.71 V              ; -0.0352 V           ; 0.253 V                              ; 0.068 V                              ; 4.96e-010 s                 ; 5.19e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-008 V                 ; 2.71 V             ; -0.0352 V          ; 0.253 V                             ; 0.068 V                             ; 4.96e-010 s                ; 5.19e-010 s                ; No                        ; Yes                       ;
+; data_bus_[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-008 V                  ; 2.71 V              ; -0.0352 V           ; 0.253 V                              ; 0.068 V                              ; 4.96e-010 s                 ; 5.19e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-008 V                 ; 2.71 V             ; -0.0352 V          ; 0.253 V                             ; 0.068 V                             ; 4.96e-010 s                ; 5.19e-010 s                ; No                        ; Yes                       ;
+; data_bus_[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-008 V                  ; 2.71 V              ; -0.0352 V           ; 0.253 V                              ; 0.068 V                              ; 4.96e-010 s                 ; 5.19e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-008 V                 ; 2.71 V             ; -0.0352 V          ; 0.253 V                             ; 0.068 V                             ; 4.96e-010 s                ; 5.19e-010 s                ; No                        ; Yes                       ;
+; data_bus_[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-008 V                  ; 2.71 V              ; -0.0352 V           ; 0.253 V                              ; 0.068 V                              ; 4.96e-010 s                 ; 5.19e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-008 V                 ; 2.71 V             ; -0.0352 V          ; 0.253 V                             ; 0.068 V                             ; 4.96e-010 s                ; 5.19e-010 s                ; No                        ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.19e-008 V                  ; 2.72 V              ; -0.0746 V           ; 0.28 V                               ; 0.169 V                              ; 3.1e-010 s                  ; 3.01e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 2.19e-008 V                 ; 2.72 V             ; -0.0746 V          ; 0.28 V                              ; 0.169 V                             ; 3.1e-010 s                 ; 3.01e-010 s                ; No                        ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.53e-008 V                  ; 2.7 V               ; -0.021 V            ; 0.204 V                              ; 0.048 V                              ; 4.85e-010 s                 ; 6.74e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 3.53e-008 V                 ; 2.7 V              ; -0.021 V           ; 0.204 V                             ; 0.048 V                             ; 4.85e-010 s                ; 6.74e-010 s                ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                                 ;
++----------------------------------+----------------------------------+----------+----------+----------+----------+
+; From Clock                       ; To Clock                         ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++----------------------------------+----------------------------------+----------+----------+----------+----------+
+; clock                            ; clock                            ; 0        ; 15       ; 1        ; 0        ;
+; mir8b:inst13|registrador:inst1|3 ; clock                            ; 0        ; 0        ; 1        ; 0        ;
+; mir8b:inst13|registrador:inst1|3 ; mir8b:inst13|registrador:inst1|4 ; 2        ; 0        ; 0        ; 0        ;
+; mir8b:inst13|registrador:inst1|3 ; mir8b:inst13|registrador:inst2|3 ; 2        ; 0        ; 0        ; 0        ;
+; mir8b:inst13|registrador:inst2|4 ; mir8b:inst13|registrador:inst2|4 ; 3        ; 0        ; 0        ; 0        ;
+; mir8b:inst13|registrador:inst1|4 ; mir8b:inst13|registrador:inst3|3 ; 3        ; 0        ; 0        ; 0        ;
+; mir8b:inst13|registrador:inst2|3 ; mir8b:inst13|registrador:inst3|3 ; 3        ; 0        ; 0        ; 0        ;
+; mir8b:inst13|registrador:inst2|4 ; mir8b:inst13|registrador:inst|4  ; 2        ; 0        ; 0        ; 0        ;
++----------------------------------+----------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                                  ;
++----------------------------------+----------------------------------+----------+----------+----------+----------+
+; From Clock                       ; To Clock                         ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++----------------------------------+----------------------------------+----------+----------+----------+----------+
+; clock                            ; clock                            ; 0        ; 15       ; 1        ; 0        ;
+; mir8b:inst13|registrador:inst1|3 ; clock                            ; 0        ; 0        ; 1        ; 0        ;
+; mir8b:inst13|registrador:inst1|3 ; mir8b:inst13|registrador:inst1|4 ; 2        ; 0        ; 0        ; 0        ;
+; mir8b:inst13|registrador:inst1|3 ; mir8b:inst13|registrador:inst2|3 ; 2        ; 0        ; 0        ; 0        ;
+; mir8b:inst13|registrador:inst2|4 ; mir8b:inst13|registrador:inst2|4 ; 3        ; 0        ; 0        ; 0        ;
+; mir8b:inst13|registrador:inst1|4 ; mir8b:inst13|registrador:inst3|3 ; 3        ; 0        ; 0        ; 0        ;
+; mir8b:inst13|registrador:inst2|3 ; mir8b:inst13|registrador:inst3|3 ; 3        ; 0        ; 0        ; 0        ;
+; mir8b:inst13|registrador:inst2|4 ; mir8b:inst13|registrador:inst|4  ; 2        ; 0        ; 0        ; 0        ;
++----------------------------------+----------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------------------------------+
+; Recovery Transfers                                                                        ;
++------------+----------------------------------+----------+----------+----------+----------+
+; From Clock ; To Clock                         ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------------------------------+----------+----------+----------+----------+
+; clock      ; mir8b:inst13|registrador:inst1|3 ; 5        ; 0        ; 0        ; 0        ;
++------------+----------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------------------------------+
+; Removal Transfers                                                                         ;
++------------+----------------------------------+----------+----------+----------+----------+
+; From Clock ; To Clock                         ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------------------------------+----------+----------+----------+----------+
+; clock      ; mir8b:inst13|registrador:inst1|3 ; 5        ; 0        ; 0        ; 0        ;
++------------+----------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design.
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design.
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 6     ; 6    ;
+; Unconstrained Input Port Paths  ; 25    ; 25   ;
+; Unconstrained Output Ports      ; 7     ; 7    ;
+; Unconstrained Output Port Paths ; 17    ; 17   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II TimeQuest Timing Analyzer
+    Info: Version 9.0 Build 132 02/25/2009 SJ Web Edition
+    Info: Processing started: Mon Jul 17 15:55:44 2017
+Info: Command: quartus_sta FCTarc03 -c FCTarc03
+Info: qsta_default_script.tcl version: #3
+Info: Core supply voltage is 1.2V
+Info: Low junction temperature is 0 degrees C
+Info: High junction temperature is 85 degrees C
+Critical Warning: Synopsys Design Constraints File file not found: 'FCTarc03.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info: No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info: Deriving Clocks
+    Info: create_clock -period 1.000 -name mir8b:inst13|registrador:inst2|4 mir8b:inst13|registrador:inst2|4
+    Info: create_clock -period 1.000 -name clock clock
+    Info: create_clock -period 1.000 -name mir8b:inst13|registrador:inst1|3 mir8b:inst13|registrador:inst1|3
+    Info: create_clock -period 1.000 -name mir8b:inst13|registrador:inst|4 mir8b:inst13|registrador:inst|4
+    Info: create_clock -period 1.000 -name mir8b:inst13|registrador:inst3|3 mir8b:inst13|registrador:inst3|3
+    Info: create_clock -period 1.000 -name mir8b:inst13|registrador:inst2|3 mir8b:inst13|registrador:inst2|3
+    Info: create_clock -period 1.000 -name mir8b:inst13|registrador:inst1|4 mir8b:inst13|registrador:inst1|4
+Critical Warning: The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
+    Critical Warning: From mir8b:inst13|registrador:inst2|4 (Rise) to mir8b:inst13|registrador:inst2|4 (Rise) (setup and hold)
+    Critical Warning: From clock (Fall) to mir8b:inst13|registrador:inst2|4 (Rise) (setup and hold)
+    Critical Warning: From clock (Fall) to mir8b:inst13|registrador:inst2|4 (Fall) (setup and hold)
+    Critical Warning: From clock (Fall) to clock (Rise) (setup and hold)
+    Critical Warning: From clock (Rise) to clock (Fall) (setup and hold)
+    Critical Warning: From mir8b:inst13|registrador:inst1|3 (Rise) to clock (Fall) (setup and hold)
+    Critical Warning: From clock (Rise) to mir8b:inst13|registrador:inst1|3 (Rise) (setup and hold)
+    Critical Warning: From clock (Fall) to mir8b:inst13|registrador:inst1|3 (Rise) (setup and hold)
+    Critical Warning: From clock (Fall) to mir8b:inst13|registrador:inst1|3 (Fall) (setup and hold)
+    Critical Warning: From mir8b:inst13|registrador:inst2|4 (Rise) to mir8b:inst13|registrador:inst|4 (Rise) (setup and hold)
+    Critical Warning: From clock (Fall) to mir8b:inst13|registrador:inst|4 (Rise) (setup and hold)
+    Critical Warning: From clock (Fall) to mir8b:inst13|registrador:inst|4 (Fall) (setup and hold)
+    Critical Warning: From clock (Fall) to mir8b:inst13|registrador:inst3|3 (Rise) (setup and hold)
+    Critical Warning: From mir8b:inst13|registrador:inst2|3 (Rise) to mir8b:inst13|registrador:inst3|3 (Rise) (setup and hold)
+    Critical Warning: From mir8b:inst13|registrador:inst1|4 (Rise) to mir8b:inst13|registrador:inst3|3 (Rise) (setup and hold)
+    Critical Warning: From clock (Fall) to mir8b:inst13|registrador:inst3|3 (Fall) (setup and hold)
+    Critical Warning: From clock (Fall) to mir8b:inst13|registrador:inst2|3 (Rise) (setup and hold)
+    Critical Warning: From mir8b:inst13|registrador:inst1|3 (Rise) to mir8b:inst13|registrador:inst2|3 (Rise) (setup and hold)
+    Critical Warning: From clock (Fall) to mir8b:inst13|registrador:inst2|3 (Fall) (setup and hold)
+    Critical Warning: From clock (Fall) to mir8b:inst13|registrador:inst1|4 (Rise) (setup and hold)
+    Critical Warning: From mir8b:inst13|registrador:inst1|3 (Rise) to mir8b:inst13|registrador:inst1|4 (Rise) (setup and hold)
+    Critical Warning: From clock (Fall) to mir8b:inst13|registrador:inst1|4 (Fall) (setup and hold)
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning: Timing requirements not met
+Info: Worst-case setup slack is -1.043
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -1.043        -7.163 clock 
+    Info:    -0.635        -0.990 mir8b:inst13|registrador:inst|4 
+    Info:    -0.449        -0.501 mir8b:inst13|registrador:inst2|4 
+    Info:     0.014         0.000 mir8b:inst13|registrador:inst2|3 
+    Info:     0.266         0.000 mir8b:inst13|registrador:inst1|4 
+    Info:     0.325         0.000 mir8b:inst13|registrador:inst3|3 
+Info: Worst-case hold slack is -0.109
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -0.109        -0.109 mir8b:inst13|registrador:inst3|3 
+    Info:     0.229         0.000 mir8b:inst13|registrador:inst1|4 
+    Info:     0.379         0.000 mir8b:inst13|registrador:inst2|4 
+    Info:     0.462         0.000 mir8b:inst13|registrador:inst2|3 
+    Info:     0.715         0.000 clock 
+    Info:     0.810         0.000 mir8b:inst13|registrador:inst|4 
+Info: Worst-case recovery slack is 0.020
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.020         0.000 mir8b:inst13|registrador:inst1|3 
+Info: Worst-case removal slack is 0.510
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.510         0.000 mir8b:inst13|registrador:inst1|3 
+Critical Warning: Found minimum pulse width or period violations. See Report Minimum Pulse Width for details.
+Info: The Metastability Analysis global option is set to OFF.
+Info: No synchronizer chains to report.
+Info: Analyzing Slow 1200mV 0C Model
+Info: Started post-fitting delay annotation
+Info: Delay annotation completed successfully
+Critical Warning: The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
+    Critical Warning: From mir8b:inst13|registrador:inst2|4 (Rise) to mir8b:inst13|registrador:inst2|4 (Rise) (setup and hold)
+    Critical Warning: From clock (Fall) to mir8b:inst13|registrador:inst2|4 (Rise) (setup and hold)
+    Critical Warning: From clock (Fall) to mir8b:inst13|registrador:inst2|4 (Fall) (setup and hold)
+    Critical Warning: From clock (Fall) to clock (Rise) (setup and hold)
+    Critical Warning: From clock (Rise) to clock (Fall) (setup and hold)
+    Critical Warning: From mir8b:inst13|registrador:inst1|3 (Rise) to clock (Fall) (setup and hold)
+    Critical Warning: From clock (Rise) to mir8b:inst13|registrador:inst1|3 (Rise) (setup and hold)
+    Critical Warning: From clock (Fall) to mir8b:inst13|registrador:inst1|3 (Rise) (setup and hold)
+    Critical Warning: From clock (Fall) to mir8b:inst13|registrador:inst1|3 (Fall) (setup and hold)
+    Critical Warning: From mir8b:inst13|registrador:inst2|4 (Rise) to mir8b:inst13|registrador:inst|4 (Rise) (setup and hold)
+    Critical Warning: From clock (Fall) to mir8b:inst13|registrador:inst|4 (Rise) (setup and hold)
+    Critical Warning: From clock (Fall) to mir8b:inst13|registrador:inst|4 (Fall) (setup and hold)
+    Critical Warning: From clock (Fall) to mir8b:inst13|registrador:inst3|3 (Rise) (setup and hold)
+    Critical Warning: From mir8b:inst13|registrador:inst2|3 (Rise) to mir8b:inst13|registrador:inst3|3 (Rise) (setup and hold)
+    Critical Warning: From mir8b:inst13|registrador:inst1|4 (Rise) to mir8b:inst13|registrador:inst3|3 (Rise) (setup and hold)
+    Critical Warning: From clock (Fall) to mir8b:inst13|registrador:inst3|3 (Fall) (setup and hold)
+    Critical Warning: From clock (Fall) to mir8b:inst13|registrador:inst2|3 (Rise) (setup and hold)
+    Critical Warning: From mir8b:inst13|registrador:inst1|3 (Rise) to mir8b:inst13|registrador:inst2|3 (Rise) (setup and hold)
+    Critical Warning: From clock (Fall) to mir8b:inst13|registrador:inst2|3 (Fall) (setup and hold)
+    Critical Warning: From clock (Fall) to mir8b:inst13|registrador:inst1|4 (Rise) (setup and hold)
+    Critical Warning: From mir8b:inst13|registrador:inst1|3 (Rise) to mir8b:inst13|registrador:inst1|4 (Rise) (setup and hold)
+    Critical Warning: From clock (Fall) to mir8b:inst13|registrador:inst1|4 (Fall) (setup and hold)
+Critical Warning: Timing requirements not met
+Info: Worst-case setup slack is -0.896
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -0.896        -5.924 clock 
+    Info:    -0.482        -0.710 mir8b:inst13|registrador:inst|4 
+    Info:    -0.290        -0.290 mir8b:inst13|registrador:inst2|4 
+    Info:     0.133         0.000 mir8b:inst13|registrador:inst2|3 
+    Info:     0.348         0.000 mir8b:inst13|registrador:inst1|4 
+    Info:     0.438         0.000 mir8b:inst13|registrador:inst3|3 
+Info: Worst-case hold slack is -0.126
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -0.126        -0.126 mir8b:inst13|registrador:inst3|3 
+    Info:     0.210         0.000 mir8b:inst13|registrador:inst1|4 
+    Info:     0.337         0.000 mir8b:inst13|registrador:inst2|4 
+    Info:     0.424         0.000 mir8b:inst13|registrador:inst2|3 
+    Info:     0.681         0.000 clock 
+    Info:     0.750         0.000 mir8b:inst13|registrador:inst|4 
+Info: Worst-case recovery slack is 0.083
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.083         0.000 mir8b:inst13|registrador:inst1|3 
+Info: Worst-case removal slack is 0.507
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.507         0.000 mir8b:inst13|registrador:inst1|3 
+Critical Warning: Found minimum pulse width or period violations. See Report Minimum Pulse Width for details.
+Info: The Metastability Analysis global option is set to OFF.
+Info: No synchronizer chains to report.
+Info: Analyzing Fast 1200mV 0C Model
+Info: Started post-fitting delay annotation
+Info: Delay annotation completed successfully
+Critical Warning: The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
+    Critical Warning: From mir8b:inst13|registrador:inst2|4 (Rise) to mir8b:inst13|registrador:inst2|4 (Rise) (setup and hold)
+    Critical Warning: From clock (Fall) to mir8b:inst13|registrador:inst2|4 (Rise) (setup and hold)
+    Critical Warning: From clock (Fall) to mir8b:inst13|registrador:inst2|4 (Fall) (setup and hold)
+    Critical Warning: From clock (Fall) to clock (Rise) (setup and hold)
+    Critical Warning: From clock (Rise) to clock (Fall) (setup and hold)
+    Critical Warning: From mir8b:inst13|registrador:inst1|3 (Rise) to clock (Fall) (setup and hold)
+    Critical Warning: From clock (Rise) to mir8b:inst13|registrador:inst1|3 (Rise) (setup and hold)
+    Critical Warning: From clock (Fall) to mir8b:inst13|registrador:inst1|3 (Rise) (setup and hold)
+    Critical Warning: From clock (Fall) to mir8b:inst13|registrador:inst1|3 (Fall) (setup and hold)
+    Critical Warning: From mir8b:inst13|registrador:inst2|4 (Rise) to mir8b:inst13|registrador:inst|4 (Rise) (setup and hold)
+    Critical Warning: From clock (Fall) to mir8b:inst13|registrador:inst|4 (Rise) (setup and hold)
+    Critical Warning: From clock (Fall) to mir8b:inst13|registrador:inst|4 (Fall) (setup and hold)
+    Critical Warning: From clock (Fall) to mir8b:inst13|registrador:inst3|3 (Rise) (setup and hold)
+    Critical Warning: From mir8b:inst13|registrador:inst2|3 (Rise) to mir8b:inst13|registrador:inst3|3 (Rise) (setup and hold)
+    Critical Warning: From mir8b:inst13|registrador:inst1|4 (Rise) to mir8b:inst13|registrador:inst3|3 (Rise) (setup and hold)
+    Critical Warning: From clock (Fall) to mir8b:inst13|registrador:inst3|3 (Fall) (setup and hold)
+    Critical Warning: From clock (Fall) to mir8b:inst13|registrador:inst2|3 (Rise) (setup and hold)
+    Critical Warning: From mir8b:inst13|registrador:inst1|3 (Rise) to mir8b:inst13|registrador:inst2|3 (Rise) (setup and hold)
+    Critical Warning: From clock (Fall) to mir8b:inst13|registrador:inst2|3 (Fall) (setup and hold)
+    Critical Warning: From clock (Fall) to mir8b:inst13|registrador:inst1|4 (Rise) (setup and hold)
+    Critical Warning: From mir8b:inst13|registrador:inst1|3 (Rise) to mir8b:inst13|registrador:inst1|4 (Rise) (setup and hold)
+    Critical Warning: From clock (Fall) to mir8b:inst13|registrador:inst1|4 (Fall) (setup and hold)
+Critical Warning: Timing requirements not met
+Info: Worst-case setup slack is -0.636
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -0.636        -4.060 clock 
+    Info:     0.111         0.000 mir8b:inst13|registrador:inst|4 
+    Info:     0.212         0.000 mir8b:inst13|registrador:inst2|4 
+    Info:     0.459         0.000 mir8b:inst13|registrador:inst2|3 
+    Info:     0.587         0.000 mir8b:inst13|registrador:inst1|4 
+    Info:     0.628         0.000 mir8b:inst13|registrador:inst3|3 
+Info: Worst-case hold slack is -0.079
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -0.079        -0.088 mir8b:inst13|registrador:inst3|3 
+    Info:     0.121         0.000 mir8b:inst13|registrador:inst1|4 
+    Info:     0.196         0.000 mir8b:inst13|registrador:inst2|4 
+    Info:     0.223         0.000 mir8b:inst13|registrador:inst2|3 
+    Info:     0.304         0.000 clock 
+    Info:     0.431         0.000 mir8b:inst13|registrador:inst|4 
+Info: Worst-case recovery slack is 0.441
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.441         0.000 mir8b:inst13|registrador:inst1|3 
+Info: Worst-case removal slack is 0.279
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.279         0.000 mir8b:inst13|registrador:inst1|3 
+Critical Warning: Found minimum pulse width or period violations. See Report Minimum Pulse Width for details.
+Info: The Metastability Analysis global option is set to OFF.
+Info: No synchronizer chains to report.
+Info: Design is not fully constrained for setup requirements
+Info: Design is not fully constrained for hold requirements
+Info: Quartus II TimeQuest Timing Analyzer was successful. 0 errors, 76 warnings
+    Info: Peak virtual memory: 230 megabytes
+    Info: Processing ended: Mon Jul 17 15:55:46 2017
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+
